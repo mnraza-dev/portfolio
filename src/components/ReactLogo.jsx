@@ -1,9 +1,10 @@
+import { useGSAP } from '@gsap/react';
 import React, { useRef } from 'react'
 
 const ReactLogo = (props) => {
     const logoRef = useRef();
 
-    useGSAP(() => {
+    useGSAPP(() => {
         gsap.to(logoRef.current.position, {
             y: logoRef.current.position.y + 1.5,
             duration: 1.5,
