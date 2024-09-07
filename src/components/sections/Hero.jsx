@@ -9,6 +9,9 @@ import { calculateSizes } from "../../constants/index.js";
 import Target from "../Target.jsx";
 import ReactLogo from "../ReactLogo.jsx";
 import Cube from "../Cube.jsx";
+import Rings from "../Rings.jsx";
+import HeroCamera from "../HeroCamera.jsx";
+import Button from "../Button.jsx";
 const Hero = () => {
   const isSmall = useMediaQuery({ maxWidth: 440 });
   const isMobile = useMediaQuery({ maxWidth: 768 });
@@ -69,23 +72,33 @@ const Hero = () => {
         <Canvas className="h-full w-full">
           <Suspense fallback={<CanvasLoader />}>
             <PerspectiveCamera makeDefault position={[0, 0, 15]} />
-            <HackerRoom
-              //   rotation={[3.8, 0, 9.4]}
-              //   position={[1.9, -10.1, 4.3]}
-              //   scale={isMobile ? 0.07 : 0.1
-              rotation={[3.8, 0, 9.4]}
-              position={sizes.deskPosition}
-              scale={sizes.deskScale}
-            />
+            <HeroCamera  isMobile={isMobile}>
+              <HackerRoom
+                //   rotation={[3.8, 0, 9.4]}
+                //   position={[1.9, -10.1, 4.3]}
+                //   scale={isMobile ? 0.07 : 0.1
+                rotation={[3.8, 0, 9.4]}
+                position={sizes.deskPosition}
+                scale={sizes.deskScale}
+              />
+            </HeroCamera>
             <group>
               <Target position={sizes.targetPosition} />
               <ReactLogo position={sizes.reactLogoPosition} />
               <Cube position={sizes.cubePosition} />
+              <Rings position={sizes.ringPosition} />
             </group>
             <ambientLight intensity={1} />
             <directionalLight position={[10, 10, 10]} intensity={0.5} />
           </Suspense>
         </Canvas>
+      </div>
+
+      <div className="absolute bottom-7 z-10 w-full left-0 right-0 c-space">
+        <a className="w-fit" href="#contact">
+            <Button name={"Get In Touch"} isBeam={true} containerClass="w-fit"  />
+        </a>
+
       </div>
     </section>
   );

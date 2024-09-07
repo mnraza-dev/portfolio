@@ -20,7 +20,7 @@ const Target = (props) => {
   });
 
   return (
-    <mesh {...props} ref={targetRef} position={[-12, Math.PI/5, -3]}>
+    <mesh scale={1.2} {...props} ref={targetRef} position={[-12, -5, -3]}>
       <primitive object={scene} />
     </mesh>
   );

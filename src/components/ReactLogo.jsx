@@ -4,7 +4,7 @@ const ReactLogo = (props) => {
   const { nodes, materials } = useGLTF("/models/react.glb");
   return (
     <Float floatIntensity={1}>
-      <group position={[8, 8, 0]} dispose={null} scale={0.3} {...props}>
+      <group position={[8, 8, 0]} dispose={null} scale={0.5} {...props}>
         <mesh
           castShadow
           receiveShadow
