@@ -1,23 +1,23 @@
-import { useGSAP } from '@gsap/react';
-import React, { useRef } from 'react'
+import { Float, useGLTF } from "@react-three/drei";
 
 const ReactLogo = (props) => {
-    const logoRef = useRef();
-// 
-    useGSAPP(() => {
-        gsap.to(logoRef.current.position, {
-            y: logoRef.current.position.y + 1.5,
-            duration: 1.5,
-            repeat: -1,
-            yoyo: true
-        })
-    })
-
+  const { nodes, materials } = useGLTF("/models/react.glb");
   return (
-    <mesh {...props} ref={logoRef} position={[-12, Math.PI/5, -3]}>
-      <primitive object={scene} />
-    </mesh>
-  )
-}
+    <Float floatIntensity={1}>
+      <group position={[8, 8, 0]} dispose={null} scale={0.3} {...props}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes["React-Logo_Material002_0"].geometry}
+          material={materials["Material.002"]}
+          position={[-5, 0.079, 0.189]}
+          rotation={[0, 0, -Math.PI / 2]}
+          scale={[0.39, 0.39, 0.5]}
+        />
+      </group>
+    </Float>
+  );
+};
 
-export default ReactLogo
+useGLTF.preload("/models/react.glb");
+export default ReactLogo;
