@@ -72,7 +72,7 @@ const Hero = () => {
         <Canvas className="h-full w-full">
           <Suspense fallback={<CanvasLoader />}>
             <PerspectiveCamera makeDefault position={[0, 0, 15]} />
-            <HeroCamera  isMobile={isMobile}>
+            <HeroCamera isMobile={isMobile}>
               <HackerRoom
                 //   rotation={[3.8, 0, 9.4]}
                 //   position={[1.9, -10.1, 4.3]}
@@ -96,9 +96,8 @@ const Hero = () => {
 
       <div className="absolute bottom-7 z-10 w-full left-0 right-0 c-space">
         <a className="w-fit" href="#contact">
-            <Button name={"Get In Touch"} isBeam={true} containerClass="w-fit"  />
+          <Button name={"Let's work together"} isBeam containerClass="sm:w-fit w-full sm:min-w-96" />
         </a>
-
       </div>
     </section>
   );
