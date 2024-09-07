@@ -8,6 +8,7 @@ import { useMediaQuery } from "react-responsive";
 import { calculateSizes } from "../../constants/index.js";
 import Target from "../Target.jsx";
 import ReactLogo from "../ReactLogo.jsx";
+import Cube from "../Cube.jsx";
 const Hero = () => {
   const isSmall = useMediaQuery({ maxWidth: 440 });
   const isMobile = useMediaQuery({ maxWidth: 768 });
@@ -77,8 +78,9 @@ const Hero = () => {
               scale={sizes.deskScale}
             />
             <group>
-                <Target position={sizes.targetPosition}/>
-                <ReactLogo position={sizes.reactLogoPosition}/>
+              <Target position={sizes.targetPosition} />
+              <ReactLogo position={sizes.reactLogoPosition} />
+              <Cube position={sizes.cubePosition} />
             </group>
             <ambientLight intensity={1} />
             <directionalLight position={[10, 10, 10]} intensity={0.5} />
