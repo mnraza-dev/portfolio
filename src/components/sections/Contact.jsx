@@ -1,31 +1,62 @@
 import React, { useRef, useState } from "react";
-import Button from "../Button";
+import emailjs from "@emailjs/browser";
+
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
+  // service_xiwh1do
   const formRef = useRef();
   const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({
     name: "",
     email: "",
-    phone: "",
     message: "",
   });
-  const handleChange = (e) => {
-    const { name, value } = e.target;
+  const handleChange = ({ target: { name, value } }) => {
     setForm({ ...form, [name]: value });
   };
-  const handleSubmit = (e) => {
-    setLoading(true);
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(form);
+    setLoading(true);
+
+    try {
+      await emailjs.send(
+        "service_xiwh1do",
+        "template_fhbrubp",
+        {
+          from_name: form.name,
+          to_name: "MNRaza",
+          from_email: form.email,
+          to_email: "mnraza1907@gmail",
+          message: form.message,
+        },
+        "9mmncuC_t6GRai78w"
+      );
+      toast.success("Email sent successfully !");
+      console.log(form);
+      
+      setLoading(false);
+      setForm({
+        name: "",
+        email: "",
+        message: "",
+      });
+    } catch (error) {
+      setLoading(false);
+      console.log(error);
+
+      toast.dark("Something went wrong !");
+    }
+
     formRef.current.reset();
     setLoading(false);
   };
   return (
-    <section className="c-space my-20 ">
+    <section id="contact" className="c-space my-20 ">
       <div className="relative min-h-screen flex items-center justify-center flex-col">
-         <h3 className="head-text ">Contact Me</h3>
-     
+        <h3 className="head-text ">Contact Me</h3>
+
         <img
           className="mt-10 absolute inset-0 min-h-screen"
           src="/assets/terminal.png"
@@ -75,17 +106,28 @@ const Contact = () => {
               <span className="field-label">Message</span>
             </label>
             <textarea
-            rows={3}
-            cols={50}
+              rows={3}
+              cols={40}
               value={form.message}
               name="message"
-              placeholder="Message"
+              placeholder="Message Here"
               onChange={handleChange}
               className="field-input"
               id=""
             ></textarea>
-            <Button containerClass={"w-full"} name={"Send Message"} isBeam />
+
+           
+            <button className="field-btn" type="submit" disabled={loading}>
+              {loading ? "Sending Message " : "Send Message"}
+
+              <img
+                src="/assets/arrow-up.png"
+                alt="Arrow Image"
+                className="field-btn_arrow"
+              />
+            </button>
           </form>
+          <ToastContainer />
         </div>
       </div>
     </section>

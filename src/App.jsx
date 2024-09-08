@@ -2,6 +2,7 @@ import About from "./components/sections/About";
 import Hero from "./components/sections/Hero";
 import Navbar from "./components/sections/Navbar";
 import Contact from "./components/sections/Contact";
+import Footer from "./components/sections/Footer";
 
 export default function App() {
   // globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
@@ -13,6 +14,7 @@ export default function App() {
       <Hero/>
       <About/>
       <Contact/>
+      <Footer/>
     </main>
   );
 }
