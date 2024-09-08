@@ -150,7 +150,10 @@ body {
     @apply w-12 h-12 rounded-full flex justify-center items-center bg-black-300 border border-black-200;
   }
 }
-
+.blob-xebia{
+  border-radius: 63% 42% 60% 51% / 45% 37% 66% 68%;
+  background: #6a1d57;
+}
 .waving-hand {
   animation-name: wave-animation;
   animation-duration: 2.5s;

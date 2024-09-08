@@ -258,31 +258,37 @@ export const navLinks = [
   };
   
   export const workExperiences = [
+    
+  
+    // {
+    //   id: 2,
+    //   name: 'Figma',
+    //   pos: 'Web Developer',
+    //   duration: '2020 - 2022',
+    //   title: "Figma is my collaborative design platform of choice. I utilize it to work seamlessly with team members and clients, facilitating real-time feedback and design iterations. Its cloud-based.",
+    //   icon: '/assets/figma.svg',
+    //   animation: 'clapping',
+    // },
+    
     {
       id: 1,
-      name: 'Framer',
-      pos: 'Lead Web Developer',
+      name: 'Xebia',
+      pos: 'Software Consultant',
       duration: '2022 - Present',
-      title: "Framer serves as my go-to tool for creating interactive prototypes. I use it to bring designs to  life, allowing stakeholders to experience the user flow and interactions before development.",
-      icon: '/assets/framer.svg',
-      animation: 'victory',
+      title: "Xebia is a pioneering Software Engineering and IT consultancy company, transforming and executing at the intersection of Domain and Technology to create digital leaders for our people, clients, partners, and communities.",
+      icon: 'https://xebia.com/wp-content/uploads/2021/11/XebiaLogo-white.svg',
+      animation: 'clapping',
+      classes:'blob-xebia',
     },
     {
       id: 2,
-      name: 'Figma',
-      pos: 'Web Developer',
-      duration: '2020 - 2022',
-      title: "Figma is my collaborative design platform of choice. I utilize it to work seamlessly with team members and clients, facilitating real-time feedback and design iterations. Its cloud-based.",
-      icon: '/assets/figma.svg',
-      animation: 'clapping',
+      name: 'Netlink',
+      pos: 'Software Engineer',
+      duration: '2021 - 2022',
+      title: "Netlink is a group of passionate technology professionals, delivering customer-centric solutions for over two decades. With technology at our core and customers in our hearts, we believe in achieving organizational scalability with innovation, workflow optimization, and digital transformation.",
+      icon: 'https://netlink.com/wp-content/uploads/2023/11/Netlink-White.png',
+      animation: 'victory',
     },
-    {
-      id: 3,
-      name: 'Notion',
-      pos: 'Junior Web Developer',
-      duration: '2019 - 2020',
-      title: "Notion helps me keep my projects organized. I use it for project management, task tracking, and as a central hub for documentation, ensuring that everything from design notes to.",
-      icon: '/assets/notion.svg',
-      animation: 'salute',
-    },
+
+   
   ];
