@@ -54,11 +54,14 @@ const Contact = () => {
   };
   return (
     <section id="contact" className="c-space my-20 ">
+      <div className="w-full textwhite-600 mb-6">
+        <h3 className="head-text">Contact Me</h3>
+      </div>
       <div className="relative min-h-screen flex items-center justify-center flex-col">
-        <h3 className="head-text ">Contact Me</h3>
+        {/* <h3 className="head-text ">Contact Me</h3> */}
 
         <img
-          className="mt-10 absolute inset-0 min-h-screen"
+          className="mt-0 absolute inset-0 min-h-screen"
           src="/assets/terminal.png"
           alt="Terminal Background Image"
         />

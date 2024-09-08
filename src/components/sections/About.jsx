@@ -14,6 +14,9 @@ const About = () => {
   };
   return (
     <section id="about" className="c-space my-20 ">
+     <div className="w-full textwhite-600 mb-10">
+        <h3 className="head-text">About Me</h3>
+      </div>
       <div className="grid  xl:grid-cols-3 grid-cols-1 h-full ">
         <div className="col-spa-1 xl:row-span-3 ">
           <div className="grid-container">

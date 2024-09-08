@@ -7,7 +7,7 @@ import Developer from "../Developer.jsx";
 
 const Experience = () => {
   return (
-    <section className="c-space my-20">
+    <section id="experience" className="c-space my-20">
       <div className="w-full textwhite-600">
         <h3 className="head-text">My Work Experience</h3>
       </div>
