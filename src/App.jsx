@@ -4,6 +4,7 @@ import Navbar from "./components/sections/Navbar";
 import Contact from "./components/sections/Contact";
 import Footer from "./components/sections/Footer";
 import Experience from "./components/sections/Experience";
+import Work from "./components/sections/Work";
 
 export default function App() {
   // globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
@@ -14,6 +15,7 @@ export default function App() {
       <Navbar />
       <Hero/>
       <About/>
+      <Work/>
       <Experience/>
       <Contact/>
       <Footer/>

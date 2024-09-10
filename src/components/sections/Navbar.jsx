@@ -7,8 +7,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="sticky top-0  z-50 bg-black/70 shadow-xl ">
-      Navbar
+    <header className=" sticky top-0  z-50 bg-black/90 shadow-xl ">
       <div className="max-w-7xl mx-auto">
         <div className="max-w-7xl flex justify-between items-center  mx-auto py-5 c-space">
           <a
