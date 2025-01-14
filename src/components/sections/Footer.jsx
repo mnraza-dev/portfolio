@@ -13,7 +13,7 @@ const Footer = () => {
           <a
             target="_blank"
             className="flex items-center justify-center"
-            href="https://github.com/mnrazablog"
+            href="https://github.com/mnraza-dev"
           >
             <img
               src="/assets/github.svg"
@@ -35,7 +35,8 @@ const Footer = () => {
             />
           </a>
         </div>
-        <div className="cursor-pointer social-icon">
+       /*
+         <div className="cursor-pointer social-icon">
           <a
             target="_blank"
             className="flex items-center justify-center"
@@ -48,6 +49,7 @@ const Footer = () => {
             />
           </a>
         </div>
+        */
       </div>
       <p className="text-white-500 flex items-center">
         &copy; {new Date().getFullYear()} MN Raza. All rights reserved.
