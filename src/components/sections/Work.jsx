@@ -8,7 +8,8 @@ const Work = () => {
       <div className="w-full textwhite-600">
         <h3 className="head-text">Projects</h3>
       </div>
-      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* Change grid to flex-col for single row per project */}
+      <div className="mt-10 flex flex-col gap-8">
         {myProjects.map((project, idx) => (
           <ProjectCard
             key={project.title + idx}
@@ -19,6 +20,7 @@ const Work = () => {
             demo={project.href}
             tags={project.tags}
             texture={project.texture}
+            index={idx}
           />
         ))}
       </div>

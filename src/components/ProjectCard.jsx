@@ -1,9 +1,12 @@
 import React from 'react'
 
-const ProjectCard = ({ title, description, image, github, demo, tags = [], texture }) => {
+const ProjectCard = ({ title, description, image, github, demo, tags = [], texture, index }) => {
+  // Alternate layout: even index = details left, media right; odd index = media left, details right
+  const isEven = index % 2 === 0;
   return (
-    <div className="bg-white dark:bg-[#18181b] rounded-xl shadow-md overflow-hidden flex flex-col h-full border border-gray-200 dark:border-zinc-800 transition hover:scale-105 hover:shadow-lg duration-200">
-      <div className="w-full h-40 flex items-center justify-center bg-gray-100 dark:bg-zinc-900 p-4">
+    <div className={`animated-border bg-white dark:bg-[#18181b] rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row ${isEven ? '' : 'md:flex-row-reverse'} h-full border border-gray-200 dark:border-zinc-800 transition dark:hover:border-blue-500/30 hover:shadow-lg duration-200`}>
+      {/* Media (image or video) */}
+      <div className="md:w-1/2 w-full aspect-video md:aspect-auto md:h-80 flex items-center justify-center bg-gray-100 dark:bg-zinc-900 p-4">
         {texture ? (
           <video
             src={texture}
@@ -15,10 +18,14 @@ const ProjectCard = ({ title, description, image, github, demo, tags = [], textu
             poster={image}
           />
         ) : (
-          <img src={image} alt={title} className="max-h-24 object-contain" />
+          <img src={image} alt={title} className="w-full h-full object-cover rounded-lg shadow-md" />
         )}
       </div>
-      <div className="p-5 flex-1 flex flex-col">
+      {/* Details */}
+      <div
+        className="hover:border-1 hover:border-blue-500/30  md:w-1/2 w-full p-5 flex-1 flex flex-col justify-center"
+        style={{ borderColor: 'rgb(30 41 59 / 1)' }}
+      >
         <h4 className="font-bold text-lg mb-2 text-gray-900 dark:text-white">{title}</h4>
         <p className="text-gray-600 dark:text-gray-300 flex-1">{description}</p>
         <div className="mt-4 flex gap-3">
