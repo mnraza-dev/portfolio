@@ -13,7 +13,7 @@ const Experience = () => {
       </div>
       <div className="work-container">
         <div className="work-canvas">
-          <Canvas>
+          {/* <Canvas>
             <ambientLight intensity={7} />
             <spotLight position={[10, 10, 10]} angle={0.15} penubra={1} />
             <directionalLight position={[10, 10, 10]} intensity={1} />
@@ -22,7 +22,7 @@ const Experience = () => {
            <Developer position-y={-3} scale={3}/>
            </Suspense>
 
-          </Canvas>
+          </Canvas> */}
         </div>
         <div className="work-content">
           <div className="sm:py-10 py-5 sm:px-5 px-2.5">

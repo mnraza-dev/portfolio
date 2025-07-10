@@ -60,7 +60,7 @@ const Hero = () => {
     <section id="home" className="text-white min-h-screen w-full flex flex-col relative">
       <div className="w-full mx-auto flex flex-col sm:mt-10 mt-4 c-space gap-3">
         <p className="sm:text-3xl text-2xl font-medium text-white text-center font-generalsans ">
-          Hi, I am MN RAZA <span className="waving-hand">👋</span>
+          Hi, I am Noorullah Raza <span className="waving-hand">👋</span>
         </p>
         <p className="hero_tag text-gray_gradient font-generalsans text-center">
           Building Products & Brands
@@ -68,7 +68,7 @@ const Hero = () => {
       </div>
       <div className="w-full h-full absolute inset-0">
         {/* using threejs */}
-        <Leva />
+        {/* <Leva />
         <Canvas className="h-full w-full">
           <Suspense fallback={<CanvasLoader />}>
             <PerspectiveCamera makeDefault position={[0, 0, 15]} />
@@ -91,7 +91,7 @@ const Hero = () => {
             <ambientLight intensity={1} />
             <directionalLight position={[10, 10, 10]} intensity={0.5} />
           </Suspense>
-        </Canvas>
+        </Canvas> */}
       </div>
 
       <div className="absolute bottom-7 z-10 w-full left-0 right-0 c-space">
