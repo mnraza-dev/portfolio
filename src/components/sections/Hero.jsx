@@ -27,7 +27,8 @@ const Hero = () => {
     "Full-Stack Developer",
     "Product Builder",
     "Problem Solver",
-    "Creative Thinker"
+    "Creative Thinker",
+    "Tech Enthusiast"
   ];
 
   useEffect(() => {
@@ -107,10 +108,13 @@ const Hero = () => {
 
       <div className="relative z-10 flex-1 flex flex-col justify-center">
         <div className="w-full mx-auto flex flex-col sm:mt-10 mt-4 c-space gap-8">
-          {/* Enhanced greeting with glow effect */}
+          {/* Enhanced greeting with better name styling */}
           <div className="text-center space-y-4">
-            <p className="sm:text-4xl text-6xl font-medium  text-white font-generalsans animate-fade-in drop-shadow-[0_0_20px_rgba(255,255,255,0.3)]">
-              Hi, I'm <span className="italic font-thin">Noorullah Raza</span> <span className="waving-hand">👋</span>
+            <p className="sm:text-4xl text-6xl font-medium text-white font-generalsans animate-fade-in drop-shadow-[0_0_20px_rgba(255,255,255,0.3)]">
+              Hi, I'm <span className="italic font-thin text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 animate-gradient">Noorullah Raza</span> <span className="waving-hand">👋</span>
+            </p>
+            <p className="text-white-600 text-lg font-generalsans animate-fade-in-delay">
+              Welcome to my digital playground
             </p>
           </div>
 
