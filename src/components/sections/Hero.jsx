@@ -113,9 +113,6 @@ const Hero = () => {
             <p className="sm:text-4xl text-6xl font-medium text-white font-generalsans animate-fade-in drop-shadow-[0_0_20px_rgba(255,255,255,0.3)]">
               Hi, I'm <span className="italic font-thin text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 animate-gradient">Noorullah Raza</span> <span className="waving-hand">👋</span>
             </p>
-            <p className="text-white-600 text-lg font-generalsans animate-fade-in-delay">
-              Welcome to my digital playground
-            </p>
           </div>
 
           {/* Enhanced dynamic role text with better styling */}
@@ -150,17 +147,58 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Tech stack preview */}
-          <div className="flex justify-center items-center gap-4 mt-8 animate-fade-in-delay-3">
-            {['React', 'Node.js', 'TypeScript', 'Three.js'].map((tech, index) => (
-              <div 
-                key={tech}
-                className="px-4 py-2 rounded-full bg-black-300 bg-opacity-50 backdrop-blur-sm border border-black-500 text-white-600 text-sm font-medium hover:bg-opacity-70 hover:text-white transition-all duration-300"
-                style={{animationDelay: `${index * 0.1}s`}}
-              >
-                {tech}
+          {/* Enhanced Tech stack preview */}
+          <div className="mt-12 animate-fade-in-delay-3">
+            <p className="text-center text-white-600 text-sm font-medium mb-6 tracking-wider uppercase">
+              Tech Stack
+            </p>
+            <div className="flex flex-wrap justify-center items-center gap-3 max-w-2xl mx-auto">
+              {[
+                { name: 'React', icon: '⚛️', color: 'from-blue-500 to-cyan-500' },
+                { name: 'Node.js', icon: '🟢', color: 'from-green-500 to-emerald-500' },
+                { name: 'TypeScript', icon: '🔷', color: 'from-blue-600 to-indigo-600' },
+                { name: 'Three.js', icon: '🎨', color: 'from-purple-500 to-pink-500' },
+                { name: 'Next.js', icon: '⚡', color: 'from-gray-700 to-black' },
+                { name: 'Tailwind', icon: '🎨', color: 'from-cyan-400 to-blue-500' },
+                { name: 'MongoDB', icon: '🍃', color: 'from-green-400 to-emerald-400' },
+                { name: 'PostgreSQL', icon: '🐘', color: 'from-blue-400 to-indigo-400' }
+              ].map((tech, index) => (
+                <div 
+                  key={tech.name}
+                  className="group relative"
+                  style={{animationDelay: `${index * 0.1}s`}}
+                >
+                  <div className="px-4 py-3 rounded-xl bg-black-300 bg-opacity-40 backdrop-blur-md border border-black-500 hover:bg-opacity-60 hover:scale-110 transition-all duration-300 cursor-pointer flex items-center gap-2 shadow-lg hover:shadow-xl">
+                    <span className="text-lg">{tech.icon}</span>
+                    <span className="text-white-600 text-sm font-medium group-hover:text-white transition-colors">
+                      {tech.name}
+                    </span>
+                  </div>
+                  {/* Gradient border effect on hover */}
+                  <div className="absolute inset-0 rounded-xl bg-gradient-to-r opacity-0 group-hover:opacity-20 transition-opacity duration-300 -z-10 blur-sm"
+                       style={{
+                         background: `linear-gradient(to right, ${tech.color.includes('from-') ? tech.color.split(' ')[0].replace('from-', '') : tech.color}, ${tech.color.includes('to-') ? tech.color.split(' ')[1].replace('to-', '') : tech.color})`
+                       }}>
+                  </div>
+                </div>
+              ))}
+            </div>
+            
+            {/* Additional tech categories */}
+            <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-4xl mx-auto">
+              <div className="text-center p-4 rounded-lg bg-black-300 bg-opacity-20 backdrop-blur-sm border border-black-500">
+                <h4 className="text-white font-medium mb-2">Frontend</h4>
+                <p className="text-white-600 text-xs">React, Next.js, TypeScript, Tailwind</p>
               </div>
-            ))}
+              <div className="text-center p-4 rounded-lg bg-black-300 bg-opacity-20 backdrop-blur-sm border border-black-500">
+                <h4 className="text-white font-medium mb-2">Backend</h4>
+                <p className="text-white-600 text-xs">Node.js, Express, MongoDB, PostgreSQL</p>
+              </div>
+              <div className="text-center p-4 rounded-lg bg-black-300 bg-opacity-20 backdrop-blur-sm border border-black-500">
+                <h4 className="text-white font-medium mb-2">3D & Graphics</h4>
+                <p className="text-white-600 text-xs">Three.js, WebGL, Blender, Unity</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
