@@ -1,6 +1,5 @@
 import React from "react";
 import { FloatingDock } from '../ui/FloatingDock';
-import { IconBrandGithub, IconBrandTwitter, IconBrandInstagram } from '@tabler/icons-react';
 
 const Footer = () => {
   return (
@@ -12,7 +11,7 @@ const Footer = () => {
           <p className="cursor-pointer">Privacy Policy</p>
         </div>
         <div className="flex gap-3">
-          <div className="cursor-pointer social-icon">
+          {/* <div className="cursor-pointer social-icon">
             <a
               target="_blank"
               className="flex items-center justify-center"
@@ -50,7 +49,7 @@ const Footer = () => {
                 className="w-1/2 h-1/2"
               />
             </a>
-          </div>
+          </div> */}
         </div>
         <p className="text-white-500 flex items-center">
           &copy; {new Date().getFullYear()} MN Raza. All rights reserved.
@@ -58,9 +57,21 @@ const Footer = () => {
       </section>
       <FloatingDock
         items={[
-          { title: 'GitHub', icon: <IconBrandGithub />, href: 'https://github.com/mnraza-dev' },
-          { title: 'Twitter', icon: <IconBrandTwitter />, href: 'https://x.com/mnraza1907' },
-          { title: 'Instagram', icon: <IconBrandInstagram />, href: 'https://www.instagram.com/mnraza_/' },
+          { 
+            title: 'GitHub', 
+            icon: <img src="/assets/github.svg" alt="GitHub" className="w-6 h-6" />, 
+            href: 'https://github.com/mnraza-dev' 
+          },
+          { 
+            title: 'Twitter', 
+            icon: <img src="/assets/twitter.svg" alt="Twitter" className="w-6 h-6" />, 
+            href: 'https://x.com/mnraza1907' 
+          },
+          { 
+            title: 'Instagram', 
+            icon: <img src="/assets/instagram.svg" alt="Instagram" className="w-6 h-6" />, 
+            href: 'https://www.instagram.com/mnraza_/' 
+          },
         ]}
         desktopClassName="fixed bottom-4 left-1/2 -translate-x-1/2 z-50"
         mobileClassName="fixed bottom-4 right-4 z-50"
