@@ -1,6 +1,12 @@
 import React from "react";
-import { FloatingDock } from '../ui/FloatingDock';
-
+import { FloatingDock } from "../ui/FloatingDock";
+import {
+  IconBrandGithub,
+  IconBrandX,
+  IconExchange,
+  IconHome,
+  IconNewSection,
+} from "@tabler/icons-react";
 const Footer = () => {
   return (
     <>
@@ -57,20 +63,39 @@ const Footer = () => {
       </section>
       <FloatingDock
         items={[
-          { 
-            title: 'GitHub', 
-            icon: <img src="/assets/github.svg" alt="GitHub" className="w-6 h-6" />, 
-            href: 'https://github.com/mnraza-dev' 
+          {
+            title: "Home",
+            icon: (
+              <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+            ),
+            href: "#",
           },
-          { 
-            title: 'Twitter', 
-            icon: <img src="/assets/twitter.svg" alt="Twitter" className="w-6 h-6" />, 
-            href: 'https://x.com/mnraza1907' 
+
+          {
+            title: "Twitter",
+            icon: (
+              <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+            ),
+            href: "https://x.com/mnraza1907",
           },
-          { 
-            title: 'Instagram', 
-            icon: <img src="/assets/instagram.svg" alt="Instagram" className="w-6 h-6" />, 
-            href: 'https://www.instagram.com/mnraza_/' 
+          {
+            title: "GitHub",
+            icon: (
+              <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+            ),
+            href: "https://github.com/mnraza-dev",
+          },
+
+          {
+            title: "Instagram",
+            icon: (
+              <img
+                src="/assets/instagram.svg"
+                alt="Instagram"
+                className="w-6 h-6"
+              />
+            ),
+            href: "https://www.instagram.com/mnraza_/",
           },
         ]}
         desktopClassName="fixed bottom-4 left-1/2 -translate-x-1/2 z-50"
