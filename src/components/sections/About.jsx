@@ -5,7 +5,7 @@ const About = () => {
   const [hasCopied, setHasCopied] = useState(false);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText("mnraza1907@gmail.com");
+    navigator.clipboard.writeText("noorullahraza007@gmail.com");
     setHasCopied(true);
 
     setTimeout(() => {
@@ -14,7 +14,7 @@ const About = () => {
   };
   return (
     <section id="about" className="c-space my-20 ">
-     <div className="w-full textwhite-600 mb-10">
+      <div className="w-full textwhite-600 mb-10">
         <h3 className="head-text">About Me</h3>
       </div>
       <div className="grid  xl:grid-cols-3 grid-cols-1 h-full ">
@@ -26,9 +26,9 @@ const About = () => {
               className="w-full sm:h-[276px] h-fit object-contain "
             />
             <div>
-              <p className="grid-headtext">Hi, I am MN Raza</p>
+              <p className="grid-headtext">Hi, I am Noorullah Raza</p>
               <p className="grid-subtext">
-                with 3+ years of experience in web development, I have honed my
+                with 4+ years of experience in web development, I have honed my
                 skills in Frontend & backend development , with a focus on
                 animated 3D websites.
               </p>
@@ -46,8 +46,8 @@ const About = () => {
             <div>
               <p className="grid-headtext">Tech Stack</p>
               <p className="grid-subtext">
-                I specialize in JavaScript with a focus on React & Next.js
-                ecosysytems.
+                I specialize in JavaScript and TypeScript with a focus on React
+                & Next.js ecosysytems.
               </p>
             </div>
           </div>

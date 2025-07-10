@@ -279,7 +279,7 @@ export const navLinks = [
       id: 1,
       name: 'Xebia',
       pos: 'Software Consultant',
-      duration: '2022 - Present',
+      duration: '2022 - 2025',
       title: "Xebia is a pioneering Software Engineering and IT consultancy company, transforming and executing at the intersection of Domain and Technology to create digital leaders for our people, clients, partners, and communities.",
       icon: 'https://xebia.com/wp-content/uploads/2021/11/XebiaLogo-white.svg',
       animation: 'clapping',

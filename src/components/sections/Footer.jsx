@@ -35,8 +35,7 @@ const Footer = () => {
             />
           </a>
         </div>
-       /*
-         <div className="cursor-pointer social-icon">
+        <div className="cursor-pointer social-icon">
           <a
             target="_blank"
             className="flex items-center justify-center"
