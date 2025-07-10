@@ -1,5 +1,5 @@
 {
-  "name": "shoppingcart",
+  "name": "threejscc-portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -12,31 +12,23 @@
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@gsap/react": "^2.1.1",
-    "@react-three/drei": "^9.112.0",
+    "@react-three/drei": "^9.111.3",
     "@react-three/fiber": "^8.17.6",
-    "@tabler/icons-react": "^3.34.0",
-    "@tailwindcss/vite": "^4.1.11",
-    "class-variance-authority": "^0.7.1",
-    "clsx": "^2.1.1",
-    "framer-motion": "^11.5.4",
-    "globe.gl": "^2.32.5",
+    "@types/three": "^0.168.0",
     "gsap": "^3.12.5",
     "leva": "^0.9.35",
-    "lucide-react": "^0.525.0",
     "maath": "^0.10.8",
-    "motion": "^12.23.3",
+    "prettier": "^3.3.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-globe.gl": "^2.27.2",
     "react-responsive": "^10.0.0",
-    "react-router-dom": "^6.26.1",
-    "react-toastify": "^10.0.5",
-    "tailwind-merge": "^3.3.1",
-    "tailwindcss-animate": "^1.0.7",
-    "three": "^0.168.0"
+    "three": "^0.167.1",
+    "three-stdlib": "^2.32.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
+    "@react-three/eslint-plugin": "^0.1.1",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
@@ -46,8 +38,8 @@
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.9",
     "globals": "^15.9.0",
-    "postcss": "^8.4.45",
-    "tailwindcss": "^3.4.17",
+    "postcss": "^8.4.41",
+    "tailwindcss": "^3.4.10",
     "vite": "^5.4.1"
   }
 }
