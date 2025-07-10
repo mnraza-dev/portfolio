@@ -38,11 +38,11 @@ const About = () => {
 
         <div className="col-span-1 xl:row-span-3">
           <div className="grid-container">
-            <img
+            {/* <img
               src="/assets/grid2.png"
               alt="Grid container image"
               className="w-full sm:h-[276px] h-fit object-contain "
-            />
+            /> */}
             <div>
               <p className="grid-headtext">Tech Stack</p>
               <p className="grid-subtext">
