@@ -50,7 +50,6 @@ const Hero = () => {
         y: (e.clientY / window.innerHeight) * 100,
       });
     };
-
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
@@ -59,8 +58,7 @@ const Hero = () => {
     <section id="home" className="text-white min-h-screen w-full flex flex-col relative overflow-hidden">
       {/* Enhanced animated background */}
       <div className="absolute inset-0 bg-gradient-to-br from-black-100 via-black-200 to-black-300 opacity-50"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent_50%)]"></div>
-      
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent_50%)]"></div>   
       {/* Animated gradient orbs */}
       <div className="absolute inset-0 overflow-hidden">
         <div 
@@ -74,8 +72,7 @@ const Hero = () => {
         />
         <div className="absolute top-20 right-20 w-64 h-64 bg-gradient-to-r from-pink-500/20 to-orange-500/20 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}} />
         <div className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}} />
-      </div>
-      
+      </div>   
       {/* Enhanced floating particles */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(30)].map((_, i) => (
@@ -94,7 +91,6 @@ const Hero = () => {
           />
         ))}
       </div>
-
       {/* Animated grid pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
@@ -105,7 +101,6 @@ const Hero = () => {
           backgroundSize: '50px 50px'
         }} />
       </div>
-
       <div className="relative z-10 flex-1 flex flex-col">
         <div className="w-full mx-auto flex flex-col sm:mt-10 mt-4 c-space gap-2">
           {/* Enhanced greeting with better name styling */}
@@ -114,7 +109,6 @@ const Hero = () => {
               Hi, I'm <span className="italic font-thin text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 animate-gradient">Noorullah Raza</span> <span className="waving-hand">👋</span>
             </p>
           </div>
-
           {/* Enhanced dynamic role text with better styling */}
           <div className="text-center min-h-[100px] flex items-center justify-center">
             <h1 className="hero_tag">
@@ -125,7 +119,6 @@ const Hero = () => {
               <span className="animate-blink text-white">|</span>
             </h1>
           </div>
-
           {/* Enhanced tagline with glow */}
           <p className="text-gray_gradient font-generalsans text-center text-2xl sm:text-3xl font-medium animate-fade-in-delay-2 drop-shadow-[0_0_15px_rgba(190,193,207,0.4)]">
             Building Products & Brands that Matter
@@ -146,8 +139,6 @@ const Hero = () => {
               <div className="text-sm text-white-600 group-hover:text-white-500 transition-colors">Satisfaction</div>
             </div>
           </div>
-
-        
         </div>
       </div>
 
@@ -206,8 +197,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-
-
     </section>
   );
 };
