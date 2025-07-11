@@ -24,10 +24,10 @@ const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   
   const roleTexts = [
-    "Full-Stack Developer",
+    "Software Developer",
     "Product Builder",
     "Problem Solver",
-    "Creative Thinker",
+    "Frontend Developer",
     "Tech Enthusiast"
   ];
 
@@ -106,8 +106,8 @@ const Hero = () => {
         }} />
       </div>
 
-      <div className="relative z-10 flex-1 flex flex-col justify-center">
-        <div className="w-full mx-auto flex flex-col sm:mt-10 mt-4 c-space gap-8">
+      <div className="relative z-10 flex-1 flex flex-col">
+        <div className="w-full mx-auto flex flex-col sm:mt-10 mt-4 c-space gap-2">
           {/* Enhanced greeting with better name styling */}
           <div className="text-center space-y-4">
             <p className="sm:text-4xl text-6xl font-medium text-white font-generalsans animate-fade-in drop-shadow-[0_0_20px_rgba(255,255,255,0.3)]">
@@ -116,7 +116,7 @@ const Hero = () => {
           </div>
 
           {/* Enhanced dynamic role text with better styling */}
-          <div className="text-center min-h-[100px] flex items-center justify-center">
+          <div className="text-center min-h-[60px] flex items-center justify-center">
             <h1 className="hero_tag">
               I'm a{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 animate-gradient drop-shadow-[0_0_10px_rgba(147,51,234,0.5)]">
@@ -147,59 +147,7 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Enhanced Tech stack preview */}
-          <div className="mt-12 animate-fade-in-delay-3">
-            <p className="text-center text-white-600 text-sm font-medium mb-6 tracking-wider uppercase">
-              Tech Stack
-            </p>
-            <div className="flex flex-wrap justify-center items-center gap-3 max-w-2xl mx-auto">
-              {[
-                { name: 'React', icon: '⚛️', color: 'from-blue-500 to-cyan-500' },
-                { name: 'Node.js', icon: '🟢', color: 'from-green-500 to-emerald-500' },
-                { name: 'TypeScript', icon: '🔷', color: 'from-blue-600 to-indigo-600' },
-                { name: 'Three.js', icon: '🎨', color: 'from-purple-500 to-pink-500' },
-                { name: 'Next.js', icon: '⚡', color: 'from-gray-700 to-black' },
-                { name: 'Tailwind', icon: '🎨', color: 'from-cyan-400 to-blue-500' },
-                { name: 'MongoDB', icon: '🍃', color: 'from-green-400 to-emerald-400' },
-                { name: 'PostgreSQL', icon: '🐘', color: 'from-blue-400 to-indigo-400' }
-              ].map((tech, index) => (
-                <div 
-                  key={tech.name}
-                  className="group relative"
-                  style={{animationDelay: `${index * 0.1}s`}}
-                >
-                  <div className="px-4 py-3 rounded-xl bg-black-300 bg-opacity-40 backdrop-blur-md border border-black-500 hover:bg-opacity-60 hover:scale-110 transition-all duration-300 cursor-pointer flex items-center gap-2 shadow-lg hover:shadow-xl">
-                    <span className="text-lg">{tech.icon}</span>
-                    <span className="text-white-600 text-sm font-medium group-hover:text-white transition-colors">
-                      {tech.name}
-                    </span>
-                  </div>
-                  {/* Gradient border effect on hover */}
-                  <div className="absolute inset-0 rounded-xl bg-gradient-to-r opacity-0 group-hover:opacity-20 transition-opacity duration-300 -z-10 blur-sm"
-                       style={{
-                         background: `linear-gradient(to right, ${tech.color.includes('from-') ? tech.color.split(' ')[0].replace('from-', '') : tech.color}, ${tech.color.includes('to-') ? tech.color.split(' ')[1].replace('to-', '') : tech.color})`
-                       }}>
-                  </div>
-                </div>
-              ))}
-            </div>
-            
-            {/* Additional tech categories */}
-            <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-4xl mx-auto">
-              <div className="text-center p-4 rounded-lg bg-black-300 bg-opacity-20 backdrop-blur-sm border border-black-500">
-                <h4 className="text-white font-medium mb-2">Frontend</h4>
-                <p className="text-white-600 text-xs">React, Next.js, TypeScript, Tailwind</p>
-              </div>
-              <div className="text-center p-4 rounded-lg bg-black-300 bg-opacity-20 backdrop-blur-sm border border-black-500">
-                <h4 className="text-white font-medium mb-2">Backend</h4>
-                <p className="text-white-600 text-xs">Node.js, Express, MongoDB, PostgreSQL</p>
-              </div>
-              <div className="text-center p-4 rounded-lg bg-black-300 bg-opacity-20 backdrop-blur-sm border border-black-500">
-                <h4 className="text-white font-medium mb-2">3D & Graphics</h4>
-                <p className="text-white-600 text-xs">Three.js, WebGL, Blender, Unity</p>
-              </div>
-            </div>
-          </div>
+        
         </div>
       </div>
 
@@ -231,26 +179,26 @@ const Hero = () => {
       </div>
 
       {/* Enhanced CTA section with better styling */}
-      <div className="absolute bottom-7 z-10 w-full left-0 right-0 c-space">
+      <div className="absolute bottom-56 z-10 w-full left-0 right-0 c-space">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
           <a className="w-fit group" href="#contact">
             <Button 
               name={"Let's work together"} 
               isBeam 
-              containerClass="sm:w-fit w-full sm:min-w-96 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300" 
+              containerClass="sm:w-fit w-full sm:min-w-64  hover:shadow-xl transform  transition-all duration-300" 
             />
           </a>
           <a className="w-fit group" href="#projects">
             <Button 
               name={"View my work"} 
-              containerClass="sm:w-fit w-full sm:min-w-48 bg-transparent border-2 border-white-600 hover:bg-white-600 hover:text-black hover:border-white-500 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl" 
+              containerClass="sm:w-fit w-full sm:min-w-56 bg-transparent border-2 border-white-600 hover:text-purple-600 hover:border-purple-600  hover:font-medium transition-all duration-300 transform shadow-lg hover:shadow-xl" 
             />
           </a>
         </div>
       </div>
 
       {/* Enhanced scroll indicator */}
-      <div className="absolute bottom-24 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
+      <div className="absolute bottom-28 left-[46vw] transform -translate-x-1/2 z-10 animate-bounce">
         <div className="flex flex-col items-center text-white-600 group cursor-pointer">
           <span className="text-sm mb-3 group-hover:text-white transition-colors">Scroll to explore</span>
           <div className="w-8 h-12 border-2 border-white-600 rounded-full flex justify-center group-hover:border-white transition-colors">
@@ -259,15 +207,7 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Floating action buttons */}
-      <div className="absolute top-8 right-8 z-10 flex flex-col gap-4">
-        <button className="w-12 h-12 rounded-full bg-black-300 bg-opacity-50 backdrop-blur-sm border border-black-500 flex items-center justify-center hover:bg-opacity-70 hover:scale-110 transition-all duration-300 group">
-          <span className="text-white-600 group-hover:text-white transition-colors">📧</span>
-        </button>
-        <button className="w-12 h-12 rounded-full bg-black-300 bg-opacity-50 backdrop-blur-sm border border-black-500 flex items-center justify-center hover:bg-opacity-70 hover:scale-110 transition-all duration-300 group">
-          <span className="text-white-600 group-hover:text-white transition-colors">💼</span>
-        </button>
-      </div>
+
     </section>
   );
 };

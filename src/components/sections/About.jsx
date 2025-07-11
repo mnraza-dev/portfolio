@@ -26,12 +26,12 @@ const About = () => {
               className="w-full sm:h-[276px] h-fit object-contain "
             />
             <div>
-              <p className="grid-headtext">Hi, I'm Noorullah Raza</p>
+              {/* <p className="grid-headtext">Hi, I'm Noorullah Raza</p>
               <p className="grid-subtext">
                 with 4+ years of experience in web development, I have honed my
                 skills in Frontend & backend development , with a focus on
                 animated 3D websites.
-              </p>
+              </p> */}
             </div>
           </div>
         </div>
@@ -49,6 +49,73 @@ const About = () => {
                 I specialize in JavaScript and TypeScript with a focus on React
                 & Next.js ecosysytems.
               </p>
+              {/* Enhanced Tech stack preview */}
+              <div className="mt-0 animate-fade-in-delay-3">
+                <div className="flex w-full flex-wrap justify-center items-center gap-4  max-w-2xl mx-auto">
+                  {[
+                    {
+                      name: "React",
+                      icon: "⚛️",
+                      color: "from-blue-500 to-cyan-500",
+                    },
+                    {
+                      name: "Node.js",
+                      icon: "🟢",
+                      color: "from-green-500 to-emerald-500",
+                    },
+                    {
+                      name: "TypeScript",
+                      icon: "🔷",
+                      color: "from-blue-600 to-indigo-600",
+                    },
+                    {
+                      name: "Three.js",
+                      icon: "🎨",
+                      color: "from-purple-500 to-pink-500",
+                    },
+                    {
+                      name: "Next.js",
+                      icon: "⚡",
+                      color: "from-gray-700 to-black",
+                    },
+                    {
+                      name: "Tailwind",
+                      icon: "🎨",
+                      color: "from-cyan-400 to-blue-500",
+                    },
+                    {
+                      name: "MongoDB",
+                      icon: "🍃",
+                      color: "from-green-400 to-emerald-400",
+                    },
+                    {
+                      name: "PostgreSQL",
+                      icon: "🐘",
+                      color: "from-blue-400 to-indigo-400",
+                    },
+                  ].map((tech, index) => (
+                    <div
+                      key={tech.name}
+                      className="group relative"
+                      style={{ animationDelay: `${index * 0.1}s` }}
+                    >
+                      <div className="px-4 py-2 w-full rounded-xl bg-black-300 bg-opacity-40 backdrop-blur-md border border-black-500 hover:bg-opacity-60 hover:scale-110 transition-all duration-300 cursor-pointer flex items-center gap-2 shadow-lg hover:shadow-xl">
+                        <span className="text-lg">{tech.icon}</span>
+                        <span className="text-white-600 text-sm font-medium group-hover:text-white transition-colors">
+                          {tech.name}
+                        </span>
+                      </div>
+                      {/* Gradient border effect on hover */}
+                      <div
+                        className="absolute inset-0 rounded-xl bg-gradient-to-r opacity-0 group-hover:opacity-20 transition-opacity duration-300 -z-10 blur-sm"
+                        style={{
+                          background: `linear-gradient(to right, ${tech.color.includes("from-") ? tech.color.split(" ")[0].replace("from-", "") : tech.color}, ${tech.color.includes("to-") ? tech.color.split(" ")[1].replace("to-", "") : tech.color})`,
+                        }}
+                      ></div>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
