@@ -1,5 +1,5 @@
 {
-  "name": "threejscc-portfolio",
+  "name": "mnraza-portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -16,6 +16,7 @@
     "@react-three/fiber": "^8.17.6",
     "@tabler/icons-react": "^3.34.0",
     "@types/three": "^0.168.0",
+    "clsx": "^2.1.1",
     "framer-motion": "^12.23.3",
     "gsap": "^3.12.5",
     "leva": "^0.9.35",

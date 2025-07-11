@@ -7,9 +7,6 @@ import Experience from "./components/sections/Experience";
 import Work from "./components/sections/Work";
 
 export default function App() {
-  // globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
-  // bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
-
   return (
     <main className="max-w-7xl mx-auto">
       <Navbar />
