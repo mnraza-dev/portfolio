@@ -67,9 +67,9 @@ export const myProjects = [
     "desc": "A visually rich Tesla landing page clone featuring multiple car models, sleek design, and smooth transitions. Built to closely replicate the look and feel of Tesla’s official website.",
     "subdesc": "Developed using React.js and styled with responsive design principles to ensure optimal display across all devices. Includes reusable components, dynamic car model sections, and modern UI animations.",
     "href": "http://tesla-clone-mnrazablog.vercel.app/",
-    "repo": "https://github.com/yourusername/tesla-clone",
+    "repo": "https://github.com/mnraza-dev/tesla-clone",
     "texture": "/textures/project/tesla-clone.mp4",
-    "logo": "/assets/project-logo1.png",
+    "logo": "/assets/tesla.gif",
     "logoStyle": {
       "backgroundColor": "#111111",
       "border": "0.2px solid #1F1F1F",
