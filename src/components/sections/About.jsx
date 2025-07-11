@@ -123,7 +123,7 @@ const About = () => {
         <div className="col-span-1 xl:row-span-4">
           <div className="grid-container">
             <div className="rounded-3xl w-full sm:h-[326px] h-fit flex justify-center items-center">
-              <Globe
+              {/* <Globe
                 height={326}
                 width={326}
                 backgroundColor="rgba(0,0,0,0)"
@@ -132,7 +132,7 @@ const About = () => {
                 showGraticules
                 globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
                 bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
-              />
+              /> */}
             </div>
             <div>
               <p className="grid-headtext">
