@@ -116,7 +116,7 @@ const Hero = () => {
           </div>
 
           {/* Enhanced dynamic role text with better styling */}
-          <div className="text-center min-h-[60px] flex items-center justify-center">
+          <div className="text-center min-h-[100px] flex items-center justify-center">
             <h1 className="hero_tag">
               I'm a{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 animate-gradient drop-shadow-[0_0_10px_rgba(147,51,234,0.5)]">
@@ -132,7 +132,7 @@ const Hero = () => {
           </p>
 
           {/* Enhanced stats with hover effects */}
-          <div className="grid grid-cols-3 gap-6 max-w-lg mx-auto mt-12 animate-fade-in-delay-3">
+          <div className="grid grid-cols-3 gap-6 max-w-lg mx-auto mt-6 animate-fade-in-delay-3">
             <div className="text-center p-6 rounded-xl bg-black-300 bg-opacity-30 backdrop-blur-md border border-black-500 hover:bg-opacity-50 hover:scale-105 transition-all duration-300 group">
               <div className="text-3xl font-bold text-white group-hover:text-blue-400 transition-colors">4+</div>
               <div className="text-sm text-white-600 group-hover:text-white-500 transition-colors">Years Experience</div>
@@ -179,7 +179,7 @@ const Hero = () => {
       </div>
 
       {/* Enhanced CTA section with better styling */}
-      <div className="absolute bottom-56 z-10 w-full left-0 right-0 c-space">
+      <div className="absolute bottom-10 z-10 w-full left-0 right-0 c-space">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
           <a className="w-fit group" href="#contact">
             <Button 
@@ -198,7 +198,7 @@ const Hero = () => {
       </div>
 
       {/* Enhanced scroll indicator */}
-      <div className="absolute bottom-28 left-[46vw] transform -translate-x-1/2 z-10 animate-bounce">
+      <div className="absolute bottom-20 left-[46vw] transform -translate-x-1/2 z-10 animate-bounce">
         <div className="flex flex-col items-center text-white-600 group cursor-pointer">
           <span className="text-sm mb-3 group-hover:text-white transition-colors">Scroll to explore</span>
           <div className="w-8 h-12 border-2 border-white-600 rounded-full flex justify-center group-hover:border-white transition-colors">

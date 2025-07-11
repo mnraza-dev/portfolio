@@ -10,7 +10,7 @@ import {
 const Footer = () => {
   return (
     <>
-      <section className="c-space pt-7 pb-3 border-t border-black-100 flex justify-between items-center flex-wrap gap-5">
+      <section className="c-space pt-4 pb-2 border-t border-black-100 flex justify-between items-center flex-wrap gap-5">
         <div className="text-white-500 flex gap-2">
           <p className="cursor-pointer">Terms & Conditions</p>
           <p>|</p>

@@ -50,7 +50,7 @@ const About = () => {
                 & Next.js ecosysytems.
               </p>
               {/* Enhanced Tech stack preview */}
-              <div className="mt-0 animate-fade-in-delay-3">
+              <div className="mt-6 animate-fade-in-delay-3">
                 <div className="flex w-full flex-wrap justify-center items-center gap-4  max-w-2xl mx-auto">
                   {[
                     {
