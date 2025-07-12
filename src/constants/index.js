@@ -63,6 +63,29 @@ export const clientReviews = [
 
 export const myProjects = [
   {
+    "title": "Movie Ticket Booking – Real-time Multiplex Platform",
+    "desc": "A responsive movie ticket booking application with real-time seat selection, theater listings, and role-based user views (Customer, Admin, and Agent). Built for fast performance and a seamless booking experience.",
+    "subdesc": "Developed using React.js and Tailwind CSS with a mobile-first design. Integrates dynamic movie schedules, booking logic, user authentication, and admin controls. Features a clean UI, animated transitions, and REST API support.",
+    "href": "https://movie-booking-app-demo.vercel.app/",
+    "repo": "https://github.com/yourusername/movie-ticket-booking",
+    "texture": "/textures/project/movie-ticket-booking.mp4",
+    "logo": "/assets/project-logo6.png",
+    "logoStyle": {
+      "backgroundColor": "#0D0D0D",
+      "border": "0.2px solid #2C2C2C",
+      "boxShadow": "0px 0px 60px 0px #FFD70030"
+    },
+    "spotlight": "/assets/spotlight-movie-booking.png",
+    "tags": [
+      { "id": 1, "name": "React.js", "path": "/assets/react.svg" },
+      { "id": 2, "name": "Tailwind CSS", "path": "/assets/tailwind.png" },
+      { "id": 3, "name": "Real-Time UX", "path": "/assets/realtime.png" },
+      { "id": 4, "name": "Responsive Design", "path": "/assets/responsive.png" },
+      { "id": 5, "name": "REST API", "path": "/assets/api.png" }
+    ]
+  }
+,  
+  {
     "title": "Tesla Clone – Responsive Product Landing Page",
     "desc": "A visually rich Tesla landing page clone featuring multiple car models, sleek design, and smooth transitions. Built to closely replicate the look and feel of Tesla’s official website.",
     "subdesc": "Developed using React.js and styled with responsive design principles to ensure optimal display across all devices. Includes reusable components, dynamic car model sections, and modern UI animations.",
