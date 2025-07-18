@@ -73,7 +73,7 @@ const FloatingDockDesktop = ({ items, className }) => {
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
       className={cn(
-        "mx-auto hidden h-16 items-end gap-4 rounded-2xl bg-gray-50 px-4 pb-3 md:flex dark:bg-neutral-900",
+        "w-max p-2 z-30 relative mx-auto flex flex-row items-center gap-x-2 px-1 bg-white/15 dark:bg-black/20 backdrop-blur-xl backdrop-saturate-150 rounded-2xl border border-white/20 dark:border-white/10 [background:linear-gradient(180deg,rgba(255,255,255,0.15),rgba(255,255,255,0.05))] dark:[background:linear-gradient(180deg,rgba(0,0,0,0.25),rgba(0,0,0,0.15))] [box-shadow:0_4px_15px_rgba(0,0,0,0.1),inset_0_0_0_1px_rgba(255,255,255,0.1),0_0_0_1px_rgba(0,0,0,0.1)] dark:[box-shadow:0_4px_15px_rgba(0,0,0,0.3),inset_0_0_0_1px_rgba(255,255,255,0.05),0_0_0_1px_rgba(0,0,0,0.2)] transform-gpu transition-all duration-300 ease-out hover:bg-white/25 hover:border-white/30 hover:[box-shadow:0_8px_20px_rgba(0,0,0,0.12),inset_0_0_0_1px_rgba(255,255,255,0.15),0_0_0_1px_rgba(0,0,0,0.1)] dark:hover:bg-black/30 dark:hover:border-white/15 dark:hover:[box-shadow:0_8px_20px_rgba(0,0,0,0.4),inset_0_0_0_1px_rgba(255,255,255,0.07),0_0_0_1px_rgba(0,0,0,0.2)] before:absolute before:inset-0 before:pointer-events-none before:rounded-2xl before:bg-gradient-to-b before:from-white/5 before:to-transparent before:dark:from-white/5 after:absolute after:inset-0 after:pointer-events-none after:rounded-2xl after:bg-[radial-gradient(circle_at_50%_-20%,rgba(255,255,255,0.15),transparent_70%)] after:dark:bg-[radial-gradient(circle_at_50%_-20%,rgba(255,255,255,0.08),transparent_70%)] max-h-14 sm:max-h-none",
         className
       )}
     >
@@ -90,43 +90,29 @@ function IconContainer({ mouseX, title, icon, href }) {
     let bounds = ref.current?.getBoundingClientRect() ?? { x: 0, width: 0 };
     return val - bounds.x - bounds.width / 2;
   });
-  let widthTransform = useTransform(distance, [-150, 0, 150], [40, 80, 40]);
-  let heightTransform = useTransform(distance, [-150, 0, 150], [40, 80, 40]);
-  let widthTransformIcon = useTransform(distance, [-150, 0, 150], [20, 40, 20]);
-  let heightTransformIcon = useTransform(distance, [-150, 0, 150], [20, 40, 20]);
-  let width = useSpring(widthTransform, { mass: 0.1, stiffness: 150, damping: 12 });
-  let height = useSpring(heightTransform, { mass: 0.1, stiffness: 150, damping: 12 });
-  let widthIcon = useSpring(widthTransformIcon, { mass: 0.1, stiffness: 150, damping: 12 });
-  let heightIcon = useSpring(heightTransformIcon, { mass: 0.1, stiffness: 150, damping: 12 });
+  // Remove scaling on hover: just use a fixed size
+  let widthIcon = useTransform(distance, [-150, 0, 150], [24, 32, 24]);
+  let heightIcon = useTransform(distance, [-150, 0, 150], [24, 32, 24]);
+  let widthIconSpring = useSpring(widthIcon, { mass: 0.1, stiffness: 150, damping: 12 });
+  let heightIconSpring = useSpring(heightIcon, { mass: 0.1, stiffness: 150, damping: 12 });
   const [hovered, setHovered] = useState(false);
   return (
-    <a href={href} target="_blank" rel="noopener noreferrer">
+    <a
+      ref={ref}
+      className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground rounded-full relative size-12 transition-colors hover:bg-white/20 dark:hover:bg-white/10"
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+    >
       <motion.div
-        ref={ref}
-        style={{ width, height }}
-        onMouseEnter={() => setHovered(true)}
-        onMouseLeave={() => setHovered(false)}
-        className="relative flex aspect-square items-center justify-center rounded-full bg-gray-200 dark:bg-neutral-800"
+        style={{ width: 28, height: 28 }}
+        className="flex items-center justify-center"
       >
-        <AnimatePresence>
-          {hovered && (
-            <motion.div
-              initial={{ opacity: 0, y: 10, x: "-50%" }}
-              animate={{ opacity: 1, y: 0, x: "-50%" }}
-              exit={{ opacity: 0, y: 2, x: "-50%" }}
-              className="absolute -top-8 left-1/2 w-fit rounded-md border border-gray-200 bg-gray-100 px-2 py-0.5 text-xs whitespace-pre text-neutral-700 dark:border-neutral-900 dark:bg-neutral-800 dark:text-white"
-            >
-              {title}
-            </motion.div>
-          )}
-        </AnimatePresence>
-        <motion.div
-          style={{ width: widthIcon, height: heightIcon }}
-          className="flex items-center justify-center"
-        >
-          {icon}
-        </motion.div>
+        {icon}
       </motion.div>
+      <span className="sr-only">{title}</span>
     </a>
   );
 } 

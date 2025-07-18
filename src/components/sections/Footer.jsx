@@ -61,6 +61,8 @@ const Footer = () => {
           &copy; {new Date().getFullYear()} MN Raza. All rights reserved.
         </p>
       </section>
+      {/* Blurred gradient bar behind the dock */}
+      <div className="fixed bottom-0 inset-x-0 h-16 w-full pointer-events-none bg-gradient-to-t from-background/40 via-background/25 to-transparent backdrop-blur-xl [-webkit-mask-image:linear-gradient(to_top,black,transparent)] dark:from-black/30 dark:via-black/20 z-20"></div>
       <FloatingDock
         items={[
           {
@@ -70,7 +72,6 @@ const Footer = () => {
             ),
             href: "#",
           },
-
           {
             title: "Twitter",
             icon: (
@@ -85,7 +86,6 @@ const Footer = () => {
             ),
             href: "https://github.com/mnraza-dev",
           },
-
           {
             title: "Instagram",
             icon: (
@@ -98,7 +98,7 @@ const Footer = () => {
             href: "https://www.instagram.com/mnraza_/",
           },
         ]}
-        desktopClassName="fixed bottom-4 left-1/2 -translate-x-1/2 z-50"
+        desktopClassName="fixed inset-x-0 bottom-0 z-30 mx-auto mb-4 flex flex-row items-center justify-center gap-x-2"
         mobileClassName="fixed bottom-4 right-4 z-50"
       />
     </>
