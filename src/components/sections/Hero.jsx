@@ -51,9 +51,9 @@ const Hero = () => {
   return (
     <section id="home" className="text-white min-h-screen w-full flex flex-col relative overflow-hidden bg-black">
       {/* Main hero content block and profile card only, backgrounds removed */}
-      <div className="relative z-10 flex-1 flex flex-col lg:flex-row gap-8 items-stretch">
+      <div className="relative z-10 flex-1 flex flex-col lg:flex-row gap-8 gap-y-12 items-stretch justify-center">
         {/* Main hero content block */}
-        <div className="w-full lg:w-2/3 mx-auto flex flex-col sm:mt-10 mt-4 c-space gap-2">
+        <div className="w-full max-w-2xl mx-auto flex flex-col sm:mt-10 mt-4 c-space gap-2">
           {/* Main hero content block, refactored to match reference */}
           <div className="space-y-8">
             {/* Badge */}
@@ -90,20 +90,20 @@ const Hero = () => {
                 <span className="text-teal-400 font-medium"> secure systems</span>.
               </p>
             </div>
-            <div className="grid grid-cols-2 gap-4 w-fit">
+            <div className="grid grid-cols-2 gap-4 w-fit mx-auto">
               <span className="w-fit px-4 py-2 border rounded-full text-sm font-medium backdrop-blur-sm shadow-sm transition-all duration-300 cursor-default flex items-center gap-2 bg-emerald-900/20 border-emerald-500/30 text-emerald-300 hover:border-emerald-400/60 hover:shadow-emerald-500/20">
                 <span className="text-base">⚛️</span>
                 <span>React & Next.js</span>
               </span>
-              <span className="w-fit px-4 py-2 border rounded-full text-sm font-medium backdrop-blur-sm shadow-sm transition-all duration-300 cursor-default flex items-center gap-2 bg-cyan-900/20 border-cyan-500/30 -ml-4 text-cyan-300 hover:border-cyan-400/60 hover:shadow-cyan-500/20">
+              <span className="w-fit px-4 py-2 border rounded-full text-sm font-medium backdrop-blur-sm shadow-sm transition-all duration-300 cursor-default flex items-center gap-2 bg-cyan-900/20 border-cyan-500/30 text-cyan-300 hover:border-cyan-400/60 hover:shadow-cyan-500/20">
                 <span className="text-base">📱</span>
                 <span>React Native</span>
               </span>
-              <span className="w-fit px-4 py-2 border rounded-full text-sm font-medium backdrop-blur-sm shadow-sm transition-all duration-300 cursor-default flex items-center gap-2 bg-cyan-900/20 border-cyan-500/30 text-cyan-300 hover:border-cyan-400/60 hover:shadow-cyan-500/20 ml-4">
+              <span className="w-fit px-4 py-2 border rounded-full text-sm font-medium backdrop-blur-sm shadow-sm transition-all duration-300 cursor-default flex items-center gap-2 bg-cyan-900/20 border-cyan-500/30 text-cyan-300 hover:border-cyan-400/60 hover:shadow-cyan-500/20">
                 <span className="text-base">🔋</span>
                 <span>Node.js & MongoDB</span>
               </span>
-              <span className="w-fit px-4 py-2 border rounded-full text-sm font-medium backdrop-blur-sm shadow-sm transition-all duration-300 cursor-default flex items-center gap-2 bg-emerald-900/20 border-emerald-500/30 text-emerald-300 hover:border-emerald-400/60 hover:shadow-emerald-500/20 ml-4">
+              <span className="w-fit px-4 py-2 border rounded-full text-sm font-medium backdrop-blur-sm shadow-sm transition-all duration-300 cursor-default flex items-center gap-2 bg-emerald-900/20 border-emerald-500/30 text-emerald-300 hover:border-emerald-400/60 hover:shadow-emerald-500/20">
                 <span className="text-base">🔐</span>
                 <span>TypeScript</span>
               </span>
@@ -131,9 +131,9 @@ const Hero = () => {
           </div>
         </div>
         {/* Right-side developer profile card */}
-        <div className="relative mt-10 lg:mt-0 lg:w-1/3 flex-shrink-0 flex justify-center items-start">
-          <div className="bg-gray-950/80 backdrop-blur-md rounded-2xl border border-emerald-900/30 p-8 font-mono text-sm shadow-2xl w-full max-w-md">
-            <div className="flex items-center gap-2 mb-6 pb-4 border-b border-gray-800/80">
+        <div className="w-full max-w-xl mx-auto mt-10 flex-shrink-0 flex justify-center items-start lg:mt-0">
+          <div className="bg-gray-950/80 backdrop-blur-md rounded-2xl border border-emerald-900/30 p-12 font-mono text-sm shadow-2xl w-full max-w-xl flex flex-col gap-6">
+            <div className="flex items-center gap-2 mb-8 pb-4 border-b border-gray-800/80">
               <div className="flex gap-2">
                 <div className="w-3 h-3 bg-red-500 rounded-full shadow-sm shadow-red-500/20"></div>
                 <div className="w-3 h-3 bg-yellow-500 rounded-full shadow-sm shadow-yellow-500/20"></div>
@@ -141,11 +141,10 @@ const Hero = () => {
               </div>
               <span className="text-emerald-300/70 ml-4 text-xs font-medium">~/portfolio/developer.ts</span>
             </div>
-            <div className="space-y-3 text-sm">
+            <div className="space-y-4 text-sm">
               <div className="text-gray-500">// Professional Developer Profile</div>
               <div>
-                <span className="text-purple-400">const</span> <span className="text-blue-300">developer</span> = {'{'}
-              </div>
+                <span className="text-purple-400">const</span> <span className="text-blue-300">developer</span> = {'{'}</div>
               <div className="ml-4">
                 <span className="text-emerald-400">name</span>:{' '}
                 <span className="text-yellow-300">"Md Noorullah Raza"</span>,
@@ -184,32 +183,6 @@ const Hero = () => {
               <div>{'}'};</div>
               <div className="mt-4 text-gray-500">// Let's build something amazing together!</div>
             </div>
-            {/* Decorative blobs and border */}
-            <div className="absolute -top-8 -right-8 w-24 h-24 bg-emerald-500/20 rounded-full blur-2xl"></div>
-            <div className="absolute -bottom-8 -left-8 w-20 h-20 bg-cyan-500/20 rounded-full blur-2xl"></div>
-            <div
-              className="absolute -top-12 -right-12 w-32 h-32 border border-emerald-500/10 rounded-full"
-              style={{ transform: 'rotate(185.772deg)' }}>
-              <div
-                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 bg-emerald-400 rounded-full"
-                style={{ boxShadow: 'rgba(16, 185, 129, 0.27) 0px 0px 2.68892px' }}></div>
-            </div>
-            <svg
-              width="120"
-              height="120"
-              viewBox="0 0 100 100"
-              className="absolute -bottom-8 -left-4 opacity-20"
-              style={{ opacity: 0.2 }}>
-              <path
-                d="M10 50 L30 50 L30 30 L50 30 L50 50 L80 50 L80 80"
-                stroke="rgba(16, 185, 129, 0.6)"
-                strokeWidth="0.5"
-                fill="none"></path>
-              <circle cx="80" cy="80" r="2" fill="rgba(16, 185, 129, 0.6)" />
-              <circle cx="30" cy="30" r="2" fill="rgba(16, 185, 129, 0.6)" />
-              <circle cx="50" cy="50" r="2" fill="rgba(16, 185, 129, 0.6)" />
-              <circle cx="79.91788627085043" cy="50" r="2" fill="rgba(16, 185, 129, 0.9)" />
-            </svg>
             {/* Social links */}
             <div style={{ opacity: 1, transform: 'none' }}>
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 pt-5">
