@@ -62,29 +62,29 @@ export const clientReviews = [
 ];
 
 export const myProjects = [
-  {
-    title: 'Clarity Cut – A Modern Background removal Tool',
-    desc: 'Clarity Cut is a modern no-code platform inspired by Bolt.new that enables users to visually build and deploy web apps without writing code.',
-    subdesc:
-      'Built using React.js, Tailwind CSS, and Zustand for state management. Features a drag-and-drop interface, live preview, and export-to-code capabilities.',
-    href: 'https://clarity-cut.vercel.app/',
-    repo: 'https://github.com/mnraza-dev/clarity-cut',
-    texture: '/textures/project/blyzr.mp4',
-    logo: '/assets/project-logo9.png',
-    logoStyle: {
-      backgroundColor: '#0E0E0E',
-      border: '0.2px solid #1A1A1A',
-      boxShadow: '0px 0px 60px 0px #10B98130',
-    },
-    spotlight: '/assets/spotlight-blyzr.png',
-    tags: [
-      { id: 1, name: 'React.js', path: '/assets/react.svg' },
-      { id: 2, name: 'Tailwind CSS', path: '/assets/tailwind.png' },
-      { id: 3, name: 'Zustand', path: '/assets/zustand.png' },
-      { id: 4, name: 'Drag & Drop', path: '/assets/dnd.png' },
-      { id: 5, name: 'No-Code', path: '/assets/nocode.png' },
-    ],
-  },
+  // {
+  //   title: 'Clarity Cut – A Modern Background removal Tool',
+  //   desc: 'Clarity Cut is a modern no-code platform inspired by Bolt.new that enables users to visually build and deploy web apps without writing code.',
+  //   subdesc:
+  //     'Built using React.js, Tailwind CSS, and Zustand for state management. Features a drag-and-drop interface, live preview, and export-to-code capabilities.',
+  //   href: 'https://clarity-cut.vercel.app/',
+  //   repo: 'https://github.com/mnraza-dev/clarity-cut',
+  //   texture: '/textures/project/blyzr.mp4',
+  //   logo: '/assets/project-logo9.png',
+  //   logoStyle: {
+  //     backgroundColor: '#0E0E0E',
+  //     border: '0.2px solid #1A1A1A',
+  //     boxShadow: '0px 0px 60px 0px #10B98130',
+  //   },
+  //   spotlight: '/assets/spotlight-blyzr.png',
+  //   tags: [
+  //     { id: 1, name: 'React.js', path: '/assets/react.svg' },
+  //     { id: 2, name: 'Tailwind CSS', path: '/assets/tailwind.png' },
+  //     { id: 3, name: 'Zustand', path: '/assets/zustand.png' },
+  //     { id: 4, name: 'Drag & Drop', path: '/assets/dnd.png' },
+  //     { id: 5, name: 'No-Code', path: '/assets/nocode.png' },
+  //   ],
+  // },
   {
     title: 'blyzr – No-Code App Builder (Bolt.new Clone)',
     desc: 'blyzr is a modern no-code platform inspired by Bolt.new that enables users to visually build and deploy web apps without writing code.',

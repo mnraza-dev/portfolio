@@ -142,33 +142,6 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="w-full h-full absolute inset-0">
-        {/* Enhanced 3D scene */}
-        <Leva />
-        <Canvas className="h-full w-full">
-          <Suspense fallback={<CanvasLoader />}>
-            <PerspectiveCamera makeDefault position={[0, 0, 15]} />
-            <HeroCamera isMobile={isMobile}>
-              {/* <HackerRoom
-                rotation={[3.8, 0, 9.4]}
-                position={sizes.deskPosition}
-                scale={sizes.deskScale}
-              /> */}
-            </HeroCamera>
-            <group>
-              <Target position={sizes.targetPosition} />
-              <ReactLogo position={sizes.reactLogoPosition} />
-              <Cube position={sizes.cubePosition} />
-              <Rings position={sizes.ringPosition} />
-            </group>
-            <ambientLight intensity={1.2} />
-            <directionalLight position={[10, 10, 10]} intensity={0.8} />
-            <pointLight position={[-10, -10, -10]} intensity={0.5} color="#3b82f6" />
-            <pointLight position={[10, -10, 10]} intensity={0.5} color="#8b5cf6" />
-          </Suspense>
-        </Canvas> 
-      </div>
-
       {/* Enhanced CTA section with better styling */}
       <div className="absolute bottom-10 z-10 w-full left-0 right-0 c-space">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6">

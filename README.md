@@ -55,4 +55,3 @@ The portfolio can be easily customized by:
 ## 📄 License
 
 This project is open source and available under the [MIT License](LICENSE).
-
