@@ -3,7 +3,7 @@ import React from 'react';
 const Contact = () => {
   return (
     <>
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+      <div className=" mb-24 relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
         <div className="text-center max-w-3xl mx-auto mb-20" style={{ opacity: 1 }}>
           <div className="inline-block" style={{ opacity: 1, transform: 'none' }}>
             <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 mb-4">

@@ -1,56 +1,87 @@
-import React from 'react'
+import React from 'react';
 
-const ProjectCard = ({ title, description, image, github, demo, tags = [], texture, index }) => {
-  // Alternate layout: even index = details left, media right; odd index = media left, details right
+const ProjectCard = ({ title, image, description, year, type = 'Web Development', tags = [], index }) => {
   const isEven = index % 2 === 0;
   return (
-    <div className={`animated-border bg-white dark:bg-[#18181b] rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row ${isEven ? '' : 'md:flex-row-reverse'} h-full border border-gray-200 dark:border-zinc-800 transition dark:hover:border-blue-500/30 hover:shadow-lg duration-200`}>
-      {/* Media (image or video) */}
-      <div className="md:w-1/2 w-full aspect-video md:aspect-auto md:h-80 flex items-center justify-center bg-gray-100 dark:bg-zinc-900 p-4">
-        {texture ? (
-          <video
-            src={texture}
-            className="w-full h-full object-contain rounded-md"
-            autoPlay
-            loop
-            muted
-            playsInline
-            poster={image}
-          />
-        ) : (
-          <img src={image} alt={title} className="w-full h-full object-cover rounded-lg shadow-md" />
-        )}
-      </div>
-      {/* Details */}
-      <div
-        className="hover:border-1 hover:border-blue-500/30  md:w-1/2 w-full p-5 flex-1 flex flex-col justify-center"
-        style={{ borderColor: 'rgb(30 41 59 / 1)' }}
-      >
-        <h4 className="font-bold text-lg mb-2 text-gray-900 dark:text-white">{title}</h4>
-        <p className="text-gray-600 dark:text-gray-300 flex-1">{description}</p>
-        <div className="mt-4 flex gap-3">
-          {demo && (
-            <a href={demo} target="_blank" rel="noopener noreferrer" className="text-green-600 dark:text-green-400 hover:underline font-medium">Live Demo</a>
-          )}
-          {github && (
-            <a href={github} target="_blank" rel="noopener noreferrer" className="flex items-center" title="View source on GitHub">
-              <img src="/assets/github.svg" alt="GitHub" className="w-5 h-5" />
-            </a>
-          )}
+    <div
+      className={`mb-12 flex items-start ${isEven ? 'flex-row' : 'flex-row-reverse'}`}
+      style={{ opacity: 1, transform: 'none' }}>
+      <div className="flex-none size-14 md:size-20 relative">
+        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-gray-900 border-2 border-emerald-500 flex items-center justify-center shadow-lg shadow-emerald-500/20 z-10">
+          <span className="text-xs font-bold text-emerald-400">{year || 2025 - index}</span>
         </div>
-        {tags.length > 0 && (
-          <div className="mt-5 flex flex-wrap gap-2">
-            {tags.map(tag => (
-              <span key={tag.name} className="flex items-center gap-1 bg-gray-200 dark:bg-zinc-800 text-xs px-2 py-1 rounded-full font-medium text-gray-700 dark:text-gray-200">
-                {tag.path && <img src={tag.path} alt={tag.name} className="w-4 h-4" />}
-                {tag.name}
-              </span>
-            ))}
+      </div>
+      <div
+        className={`flex-grow ${isEven ? 'md:mr-8' : 'md:ml-8'} rounded-xl bg-gray-900/50 backdrop-blur-sm border border-gray-800 hover:border-cyan-500/30 overflow-hidden transition-all duration-500 relative`}
+        style={{ transform: 'none' }}>
+        <div className="h-0.5 w-full bg-gradient-to-r from-emerald-500/30 via-teal-500/20 to-cyan-500/10"></div>
+        <div className="p-5 border-b border-gray-800/50">
+          <div className="flex justify-between items-start mb-2">
+            <h3 className="text-xl font-bold text-white">{title}</h3>
+            <span className="px-2 py-1 text-xs rounded-md bg-gray-800/80 backdrop-blur-sm text-cyan-400 border border-cyan-500/30">
+              {type}
+            </span>
           </div>
-        )}
+          <p className="text-gray-300 text-sm">{description}</p>
+        </div>
+        <div className="p-5">
+          <div className="mb-4">
+            <h4 className="text-sm font-medium text-gray-400 mb-2">Technologies:</h4>
+            <div className="flex flex-wrap gap-2">
+              {tags &&
+                tags.map((tag, i) => (
+                  <span
+                    key={i}
+                    className="px-2  flex gap-1 py-1 rounded-md text-xs font-medium bg-gray-800/70 text-gray-300 border border-gray-700/50">
+                    <img src={tag.path} alt={tag.name} class="w-4 h-4" /> {tag.name || tag}
+                  </span>
+                ))}
+            </div>
+          </div>
+          <div className="flex items-center justify-between mt-4">
+            <button className="text-sm font-medium text-cyan-400 hover:text-cyan-300 transition-colors flex items-center">
+              <svg
+                className="w-4 h-4 mr-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+              View Details
+            </button>
+            <div className="flex space-x-2">
+              <div className="w-8 h-8 rounded-full bg-gray-800 border border-gray-700 flex items-center justify-center text-gray-500 cursor-not-allowed">
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  strokeWidth="0"
+                  viewBox="0 0 448 512"
+                  height="14"
+                  width="14"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M400 224h-24v-72C376 68.2 307.8 0 224 0S72 68.2 72 152v72H48c-26.5 0-48 21.5-48 48v192c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V272c0-26.5-21.5-48-48-48zm-104 0H152v-72c0-39.7 32.3-72 72-72s72 32.3 72 72v72z"></path>
+                </svg>
+              </div>
+              <div className="w-8 h-8 rounded-full bg-gray-800 border border-gray-700 flex items-center justify-center text-gray-500 cursor-not-allowed">
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  strokeWidth="0"
+                  viewBox="0 0 448 512"
+                  height="14"
+                  width="14"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M400 224h-24v-72C376 68.2 307.8 0 224 0S72 68.2 72 152v72H48c-26.5 0-48 21.5-48 48v192c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V272c0-26.5-21.5-48-48-48zm-104 0H152v-72c0-39.7 32.3-72 72-72s72 32.3 72 72v72z"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div className="h-0.5 w-full bg-gradient-to-r from-cyan-500/10 via-teal-500/20 to-emerald-500/30"></div>
+        </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ProjectCard
+export default ProjectCard;
