@@ -1,12 +1,6 @@
-import React from "react";
-import { FloatingDock } from "../ui/FloatingDock";
-import {
-  IconBrandGithub,
-  IconBrandX,
-  IconExchange,
-  IconHome,
-  IconNewSection,
-} from "@tabler/icons-react";
+import React from 'react';
+import { FloatingDock } from '../ui/FloatingDock';
+import { IconBrandGithub, IconBrandLinkedin, IconBrandLinkedinFilled, IconBrandX, IconExchange, IconHome, IconNewSection } from '@tabler/icons-react';
 const Footer = () => {
   return (
     <>
@@ -66,36 +60,29 @@ const Footer = () => {
       <FloatingDock
         items={[
           {
-            title: "Home",
-            icon: (
-              <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-            ),
-            href: "#",
+            title: 'Home',
+            icon: <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />,
+            href: '#',
           },
           {
-            title: "Twitter",
-            icon: (
-              <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-            ),
-            href: "https://x.com/mnraza1907",
+            title: 'Twitter',
+            icon: <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />,
+            href: 'https://x.com/mnraza1907',
           },
           {
-            title: "GitHub",
-            icon: (
-              <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-            ),
-            href: "https://github.com/mnraza-dev",
+            title: 'LinkedIn',
+            icon: <IconBrandLinkedin className="h-full w-full text-neutral-500 dark:text-neutral-300" />,
+            href: 'https://linkedin.com/mnraza1907',
           },
           {
-            title: "Instagram",
-            icon: (
-              <img
-                src="/assets/instagram.svg"
-                alt="Instagram"
-                className="w-6 h-6"
-              />
-            ),
-            href: "https://www.instagram.com/mnraza_/",
+            title: 'GitHub',
+            icon: <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />,
+            href: 'https://github.com/mnraza-dev',
+          },
+          {
+            title: 'Instagram',
+            icon: <img src="/assets/instagram.svg" alt="Instagram" className="w-6 h-6" />,
+            href: 'https://www.instagram.com/mnraza_/',
           },
         ]}
         desktopClassName="fixed inset-x-0 bottom-0 z-30 mx-auto mb-4 flex flex-row items-center justify-center gap-x-2"
