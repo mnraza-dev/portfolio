@@ -28,8 +28,20 @@ const About = () => {
           <rect width="100%" height="100%" fill="url(#techPattern)"></rect>
         </svg>
       </div>
-      <div className="w-full textwhite-600 mb-10">
-        <h3 className="head-text">About Me</h3>
+      <div className="text-center mb-16" style={{ opacity: 1 }}>
+        <div className="inline-block" style={{ opacity: 1, transform: 'none' }}>
+          <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 mb-4">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 mr-2"></span>
+            <span className="tracking-wider">ABOUT ME</span>
+          </span>
+        </div>
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent" style={{ opacity: 1, transform: 'none' }}>
+          Bringing Ideas to{' '}
+          <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">Life</span>
+        </h2>
+        <p className="max-w-3xl mx-auto text-xl text-gray-400 leading-relaxed" style={{ opacity: 1, transform: 'none' }}>
+          I'm a full-stack developer passionate about building elegant solutions that solve real-world problems.
+        </p>
       </div>
       <div className="grid  xl:grid-cols-3 grid-cols-1 h-full ">
         <div className="col-spa-1 xl:row-span-3 ">
