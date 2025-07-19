@@ -432,131 +432,135 @@ export const workExperiences = [
 
 export const skills = {
   frontend: [
-   
     {
       id: 1,
       name: 'JavaScript',
-      image: '/assets/skills/javascript.svg'
+      image: '/assets/skills/javascript.svg',
     },
     {
       id: 2,
       name: 'TypeScript',
-      image: '/assets/skills/typescript.png'
+      image: '/assets/skills/typescript.svg',
     },
     {
       id: 3,
       name: 'React',
-      image: '/assets/skills/react.svg'
+      image: '/assets/skills/react.svg',
     },
     {
       id: 4,
       name: 'CSS3',
-      image: '/assets/skills/css3.svg'
+      image: '/assets/skills/css3.svg',
     },
     {
       id: 5,
       name: 'SCSS',
-      image: '/assets/skills/scss.svg'
+      image: '/assets/skills/scss.svg',
     },
     {
       id: 6,
       name: 'Tailwind CSS',
-      image: '/assets/skills/tailwindcss.png'
+      image: '/assets/skills/tailwindcss.png',
     },
     {
       id: 7,
       name: 'Angular',
-      image: '/assets/skills/angular.svg'
+      image: '/assets/skills/angular.svg',
     },
     {
       id: 8,
       name: 'Material UI',
-      image: '/assets/skills/material-ui-svgrepo-com.svg'
+      image: '/assets/skills/material-ui-svgrepo-com.svg',
     },
     {
       id: 9,
       name: 'Redux Toolkit',
-      image: '/assets/skills/redux.svg'
-    }
+      image: '/assets/skills/redux.svg',
+    },
   ],
   backend: [
     {
       id: 10,
       name: 'Node.js',
-      image: '/assets/skills/nodejs.svg'
+      image: '/assets/skills/nodejs-1.svg',
     },
     {
       id: 11,
       name: 'Express',
-      image: '/assets/skills/express.svg'
+      image: '/assets/skills/express.svg',
     },
     {
       id: 12,
       name: 'MongoDB',
-      image: '/assets/skills/mongodb.svg'
+      image: '/assets/skills/mongodb.svg',
     },
     {
       id: 13,
       name: 'PostgreSQL',
-      image: '/assets/skills/postresql.svg'
-    }
+      image: '/assets/skills/postresql.svg',
+    },
   ],
   devops: [
     {
       id: 14,
       name: 'Docker',
-      image: '/assets/skills/docker.svg'
+      image: '/assets/skills/docker.svg',
     },
     {
       id: 15,
       name: 'AWS',
-      image: '/assets/skills/aws-svgrepo-com.svg'
+      image: '/assets/skills/aws.svg',
     },
     {
       id: 16,
       name: 'Linux',
-      image: '/assets/skills/linux.svg'
+      image: '/assets/skills/linux.svg',
     },
     {
       id: 17,
       name: 'Ansible',
-      image: '/assets/skills/ansible.svg'
-    }
+      image: '/assets/skills/ansible.svg',
+    },
   ],
   mobile: [
     {
       id: 18,
       name: 'Android',
-      image: '/assets/skills/android.svg'
-    }
+      image: '/assets/skills/android.svg',
+    },
+    {
+      id: 19,
+      name: 'React Native',
+      image: '/assets/skills/react.svg',
+    },
   ],
   ai_ml: [
     {
-      id: 19,
+      id: 20,
       name: 'TensorFlow',
-      image: '/assets/skills/tensorflow.svg'
-    }
+      image: '/assets/skills/tensorflow.svg',
+    },
   ],
   tools: [
     {
-      id: 20,
-      name: 'Git',
-      image: '/assets/skills/git.svg'
-    },
-    {
       id: 21,
-      name: 'GitHub',
-      image: '/assets/skills/github.svg'
+      name: 'Git',
+      image: '/assets/skills/git.svg',
     },
     {
       id: 22,
-      name: 'Stripe',
-      image: '/assets/skills/stripe.svg'
+      name: 'GitHub',
+      image: '/assets/skills/github.svg',
     },
     {
       id: 23,
+      name: 'Stripe',
+      image: '/assets/skills/stripe.svg',
+    },
+    {
+      id: 24,
       name: 'AMP',
-      image: '/assets/skills/amp.svg'
-    }
-  ]
+      image: '/assets/skills/amp.svg',
+    },
+  ],
 };

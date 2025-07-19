@@ -26,8 +26,6 @@ const ShuttleAnimation = memo(() => {
     </div>
   );
 });
-
-// Optimized color theme configuration with CSS custom properties
 const COLOR_THEMES = {
   cyan: {
     title: "text-cyan-400",
@@ -86,6 +84,7 @@ const SkillPill = memo(({
 }) => {
   const pillRef = useRef(null);
   const [isInView, setIsInView] = useState(false);
+  const [imageError, setImageError] = useState(false);
   
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -100,7 +99,12 @@ const SkillPill = memo(({
     return () => observer.disconnect();
   }, []);
 
-  const showImage = skill.image && !hasImageError;
+  const showImage = skill.image && !imageError && !hasImageError;
+  
+  const handleImageError = () => {
+    setImageError(true);
+    onImageError();
+  };
   
   return (
     <div 
@@ -128,12 +132,14 @@ const SkillPill = memo(({
             width="20"
             className="rounded-full"
             draggable={false}
-            onError={onImageError}
+            onError={handleImageError}
             loading="lazy"
           />
         </div>
       ) : (
-        <div className={`${colors.icon} transition-colors w-5 h-5 rounded-full bg-current opacity-20`}></div>
+        <div className={`${colors.icon} transition-colors w-5 h-5 rounded-full bg-current opacity-20 flex items-center justify-center`}>
+          <span className="text-xs text-gray-500">{skill.name.charAt(0)}</span>
+        </div>
       )}
       <span className="text-sm font-medium text-white group-hover:text-gray-100 transition-colors">
         {skill.name}
@@ -142,20 +148,17 @@ const SkillPill = memo(({
   );
 });
 
-// Optimized skill section component with virtual scrolling concept
+// Optimized skill section component
 const SkillSection = memo(({ title, skillsList, color = "cyan" }) => {
   const [skillItems, setSkillItems] = useState(skillsList);
   const [draggedIndex, setDraggedIndex] = useState(null);
   const [imageErrors, setImageErrors] = useState(new Set());
-  const sectionRef = useRef(null);
 
-  // Memoized color theme with CSS custom properties
   const colors = useMemo(() => {
     const theme = COLOR_THEMES[color] || COLOR_THEMES.cyan;
     return theme;
   }, [color]);
 
-  // Optimized drag handlers with useCallback and debouncing
   const handleDragStart = useCallback((e, index) => {
     setDraggedIndex(index);
     e.dataTransfer.setData('text/plain', index.toString());
@@ -192,27 +195,8 @@ const SkillSection = memo(({ title, skillsList, color = "cyan" }) => {
     setImageErrors(prev => new Set(prev).add(skillId));
   }, []);
 
-  // Memoized skill pills to prevent unnecessary re-renders
-  const skillPills = useMemo(() => 
-    skillItems.map((skill, index) => (
-      <SkillPill
-        key={`${skill.id}-${index}`}
-        skill={skill}
-        index={index}
-        colors={colors}
-        isDragging={draggedIndex === index}
-        hasImageError={imageErrors.has(skill.id)}
-        onDragStart={handleDragStart}
-        onDragOver={handleDragOver}
-        onDrop={handleDrop}
-        onDragEnd={handleDragEnd}
-        onImageError={() => handleImageError(skill.id)}
-      />
-    )), [skillItems, colors, draggedIndex, imageErrors, handleDragStart, handleDragOver, handleDrop, handleDragEnd, handleImageError]
-  );
-
   return (
-    <div ref={sectionRef} className="space-y-6" style={{ opacity: 1 }}>
+    <div className="space-y-6" style={{ opacity: 1 }}>
       <div className="mb-12 text-center" style={{ opacity: 1, transform: 'none' }}>
         <h3 className={`text-2xl font-bold ${colors.title} inline-block relative`}>
           {title}
@@ -220,18 +204,30 @@ const SkillSection = memo(({ title, skillsList, color = "cyan" }) => {
         </h3>
       </div>
       <div className="flex flex-wrap justify-center gap-3">
-        {skillPills}
+        {skillItems.map((skill, index) => (
+          <SkillPill
+            key={`${skill.id}-${index}`}
+            skill={skill}
+            index={index}
+            colors={colors}
+            isDragging={draggedIndex === index}
+            hasImageError={imageErrors.has(skill.id)}
+            onDragStart={handleDragStart}
+            onDragOver={handleDragOver}
+            onDrop={handleDrop}
+            onDragEnd={handleDragEnd}
+            onImageError={() => handleImageError(skill.id)}
+          />
+        ))}
       </div>
     </div>
   );
 });
 
-// Main component with optimized rendering and lazy loading
 const TechnicalSkills = memo(() => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
 
-  // Intersection observer for lazy loading
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
