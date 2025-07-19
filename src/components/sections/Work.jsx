@@ -41,7 +41,7 @@ const Work = () => {
           </button>
         </div>
       </div>
-      <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div className="mt-10 mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         {myProjects.map((project, idx) => (
           <ProjectCard
             key={project.title + idx}
