@@ -429,3 +429,134 @@ export const workExperiences = [
   //   animation: 'victory',
   // },
 ];
+
+export const skills = {
+  frontend: [
+   
+    {
+      id: 1,
+      name: 'JavaScript',
+      image: '/assets/skills/javascript.svg'
+    },
+    {
+      id: 2,
+      name: 'TypeScript',
+      image: '/assets/skills/typescript.png'
+    },
+    {
+      id: 3,
+      name: 'React',
+      image: '/assets/skills/react.svg'
+    },
+    {
+      id: 4,
+      name: 'CSS3',
+      image: '/assets/skills/css3.svg'
+    },
+    {
+      id: 5,
+      name: 'SCSS',
+      image: '/assets/skills/scss.svg'
+    },
+    {
+      id: 6,
+      name: 'Tailwind CSS',
+      image: '/assets/skills/tailwindcss.png'
+    },
+    {
+      id: 7,
+      name: 'Angular',
+      image: '/assets/skills/angular.svg'
+    },
+    {
+      id: 8,
+      name: 'Material UI',
+      image: '/assets/skills/material-ui-svgrepo-com.svg'
+    },
+    {
+      id: 9,
+      name: 'Redux Toolkit',
+      image: '/assets/skills/redux.svg'
+    }
+  ],
+  backend: [
+    {
+      id: 10,
+      name: 'Node.js',
+      image: '/assets/skills/nodejs.svg'
+    },
+    {
+      id: 11,
+      name: 'Express',
+      image: '/assets/skills/express.svg'
+    },
+    {
+      id: 12,
+      name: 'MongoDB',
+      image: '/assets/skills/mongodb.svg'
+    },
+    {
+      id: 13,
+      name: 'PostgreSQL',
+      image: '/assets/skills/postresql.svg'
+    }
+  ],
+  devops: [
+    {
+      id: 14,
+      name: 'Docker',
+      image: '/assets/skills/docker.svg'
+    },
+    {
+      id: 15,
+      name: 'AWS',
+      image: '/assets/skills/aws-svgrepo-com.svg'
+    },
+    {
+      id: 16,
+      name: 'Linux',
+      image: '/assets/skills/linux.svg'
+    },
+    {
+      id: 17,
+      name: 'Ansible',
+      image: '/assets/skills/ansible.svg'
+    }
+  ],
+  mobile: [
+    {
+      id: 18,
+      name: 'Android',
+      image: '/assets/skills/android.svg'
+    }
+  ],
+  ai_ml: [
+    {
+      id: 19,
+      name: 'TensorFlow',
+      image: '/assets/skills/tensorflow.svg'
+    }
+  ],
+  tools: [
+    {
+      id: 20,
+      name: 'Git',
+      image: '/assets/skills/git.svg'
+    },
+    {
+      id: 21,
+      name: 'GitHub',
+      image: '/assets/skills/github.svg'
+    },
+    {
+      id: 22,
+      name: 'Stripe',
+      image: '/assets/skills/stripe.svg'
+    },
+    {
+      id: 23,
+      name: 'AMP',
+      image: '/assets/skills/amp.svg'
+    }
+  ]
+};
