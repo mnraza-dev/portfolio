@@ -107,6 +107,7 @@ export const myProjects = [
       { id: 4, name: 'Drag & Drop', path: '/assets/dnd.png' },
       { id: 5, name: 'No-Code', path: '/assets/nocode.png' },
     ],
+    year: '2025',
   },
   {
     title: 'URL shortener – A Smart URL Shortener',
@@ -130,6 +131,7 @@ export const myProjects = [
       { id: 4, name: 'Express.js', path: '/assets/express.png' },
       { id: 5, name: 'MongoDB', path: '/assets/mongodb.png' },
     ],
+    year: '2025',
   },
   {
     title: 'Movie Ticket Booking – Real-time Multiplex Platform',
@@ -153,6 +155,7 @@ export const myProjects = [
       { id: 4, name: 'Responsive Design', path: '/assets/responsive.png' },
       { id: 5, name: 'REST API', path: '/assets/api.png' },
     ],
+    year: '2025',
   },
   {
     title: 'Tesla Clone – Responsive Product Landing Page',
@@ -175,6 +178,7 @@ export const myProjects = [
       { id: 3, name: 'CSS3', path: '/assets/css3.png' },
       { id: 4, name: 'JavaScript', path: '/assets/javascript.png' },
     ],
+    year: '2025',
   },
   {
     title: 'SkillForge – Interactive Learning Platform',
@@ -206,6 +210,7 @@ export const myProjects = [
       { id: 12, name: 'Netlify', path: '/assets/netlify.png' },
       { id: 13, name: 'Railway', path: '/assets/railway.png' },
     ],
+    year: '2025',
   },
   {
     title: 'ClientHub - CRM & Customer Support Platform',
@@ -238,6 +243,7 @@ export const myProjects = [
       { id: 13, name: 'Twilio API', path: '/assets/twilio.png' },
       { id: 14, name: 'Stripe API', path: '/assets/stripe.png' },
     ],
+    year: '2025',
   },
   {
     title: 'Xenesis - HR Management Platform',
@@ -262,6 +268,7 @@ export const myProjects = [
       { id: 5, name: 'Micro Frontends', path: '/assets/mfe.png' },
       { id: 6, name: 'JSON', path: '/assets/json.png' },
     ],
+    year: '2025',
   },
   {
     title: 'Invoice Generator - Automated Billing App',
@@ -286,6 +293,7 @@ export const myProjects = [
       { id: 5, name: 'CSS3', path: '/assets/css3.png' },
       { id: 6, name: 'JSON', path: '/assets/json.png' },
     ],
+    year: '2025',
   },
   {
     title: 'SupportDesk – Real-Time Role-Based Ticketing System',
@@ -314,6 +322,7 @@ export const myProjects = [
       { id: 9, name: 'Docker', path: '/assets/docker.png' },
       { id: 10, name: 'Responsive Design', path: '/assets/responsive.png' },
     ],
+    year: '2025',
   },
 ];
 
@@ -329,7 +338,6 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
 };
 
 export const workExperiences = [
-  
   {
     year: '2022',
     icon: 'https://xebia.com/wp-content/uploads/2021/11/XebiaLogo-white.svg',
@@ -364,7 +372,7 @@ export const workExperiences = [
     reverse: false,
   },
   {
-    year: '2022',
+    year: '2021',
     icon: 'https://xebia.com/wp-content/uploads/2021/11/XebiaLogo-white.svg',
     company: 'Netlink Digital Solutions',
     icon: 'https://netlink.com/wp-content/uploads/2023/11/Netlink-White.png',

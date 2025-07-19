@@ -3,17 +3,23 @@ import React from 'react';
 const ProjectCard = ({ title, image, description, year, type = 'Web Development', tags = [], index }) => {
   const isEven = index % 2 === 0;
   return (
-    <div
-      className={`mb-12 flex items-start ${isEven ? 'flex-row' : 'flex-row-reverse'}`}
-      style={{ opacity: 1, transform: 'none' }}>
-      <div className="flex-none size-14 md:size-20 relative">
-        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-gray-900 border-2 border-emerald-500 flex items-center justify-center shadow-lg shadow-emerald-500/20 z-10">
-          <span className="text-xs font-bold text-emerald-400">{year || 2025 - index}</span>
-        </div>
-      </div>
+    <div className={`mb-12 flex items-start justify-center  group`} style={{ opacity: 1, transform: 'none' }}>
       <div
-        className={`flex-grow ${isEven ? 'md:mr-8' : 'md:ml-8'} rounded-xl bg-gray-900/50 backdrop-blur-sm border border-gray-800 hover:border-cyan-500/30 overflow-hidden transition-all duration-500 relative`}
+        className={`flex-grow max-w-2xl w-full ${isEven ? 'md:mr-8' : 'md:ml-8'} rounded-xl bg-gradient-to-br from-gray-900/60 via-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-gray-800 hover:border-cyan-500/30 overflow-hidden transition-all duration-300 relative shadow-lg group-hover:scale-[1.025] group-hover:shadow-cyan-500/10 mx-auto`}
         style={{ transform: 'none' }}>
+        <div className="flex-none size-14 md:size-20 relative">
+          <div className="absolute top-4 left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-gray-900 border-2 border-emerald-500 flex items-center justify-center shadow-lg shadow-emerald-500/20 z-10">
+            <span className="text-xs font-bold text-emerald-400">{year}</span>
+          </div>
+        </div>
+        {image && (
+          <img
+            src={image}
+            alt={title}
+            className="w-24 h-24 object-cover rounded-lg shadow-md mx-auto mt-6 mb-4 border-2 border-gray-800 bg-gray-900"
+            style={{ maxWidth: '96px' }}
+          />
+        )}
         <div className="h-0.5 w-full bg-gradient-to-r from-emerald-500/30 via-teal-500/20 to-cyan-500/10"></div>
         <div className="p-5 border-b border-gray-800/50">
           <div className="flex justify-between items-start mb-2">
@@ -32,8 +38,9 @@ const ProjectCard = ({ title, image, description, year, type = 'Web Development'
                 tags.map((tag, i) => (
                   <span
                     key={i}
-                    className="px-2  flex gap-1 py-1 rounded-md text-xs font-medium bg-gray-800/70 text-gray-300 border border-gray-700/50">
-                    <img src={tag.path} alt={tag.name} class="w-4 h-4" /> {tag.name || tag}
+                    className="px-2 flex items-center gap-1 py-1 rounded-md text-xs font-medium bg-gray-800/70 text-gray-300 border border-gray-700/50">
+                    {tag.path && <img src={tag.path} alt={tag.name} className="w-4 h-4" />}
+                    {tag.name || tag}
                   </span>
                 ))}
             </div>

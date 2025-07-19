@@ -41,18 +41,16 @@ const Work = () => {
           </button>
         </div>
       </div>
-      {/* Change grid to flex-col for single row per project */}
-      <div className="mt-10 flex flex-col flex-wrap gap-8">
+      <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-10">
         {myProjects.map((project, idx) => (
           <ProjectCard
             key={project.title + idx}
             title={project.title}
             description={project.desc}
             image={project.logo}
-            github={project.github}
-            demo={project.href}
+            year={project.year}
+            type={project.type}
             tags={project.tags}
-            texture={project.texture}
             index={idx}
           />
         ))}
