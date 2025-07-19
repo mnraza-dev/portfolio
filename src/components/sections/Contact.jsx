@@ -148,13 +148,7 @@ const Contact = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="space-y-1">
-                    <label htmlFor="subject" className="block text-sm text-gray-400">Subject</label>
-                    <div className="relative group">
-                      <input id="subject" className="w-full bg-gray-800/50 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none transition-all duration-300" placeholder="Project Inquiry" name="subject" />
-                      <div className="absolute bottom-0 left-0 h-[2px] w-0 group-focus-within:w-full bg-gradient-to-r from-emerald-400 to-cyan-400 transition-all duration-500"></div>
-                    </div>
-                  </div>
+               
                   <div className="space-y-1">
                     <label htmlFor="message" className="block text-sm text-gray-400">Message</label>
                     <div className="relative group">
