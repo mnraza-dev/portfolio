@@ -5,6 +5,7 @@ import Contact from "./components/sections/Contact";
 import Footer from "./components/sections/Footer";
 import Experience from "./components/sections/Experience";
 import Work from "./components/sections/Work";
+import TechnicalSkills from "./components/sections/TechnicalSkills";
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
       <Navbar />
       <Hero/>
       <About/>
+      <TechnicalSkills/>
       <Work/>
       <Experience/>
       <Contact/>

@@ -60,21 +60,21 @@ const About = () => {
              
               <div className="grid grid-cols-2 gap-3 text-center mb-4">
                 <div>
-                  <p className="text-xl font-bold text-emerald-400">20+</p>
+                  <p className="text-xl font-bold text-emerald-400">10+</p>
                   <p className="text-xs text-gray-400">Projects</p>
                 </div>
                 <div>
                   <p className="text-xl font-bold text-emerald-400">4+ Years</p>
                   <p className="text-xs text-gray-400">Experience</p>
                 </div>
-                <div>
+                {/* <div>
                   <p className="text-xl font-bold text-emerald-400">10+</p>
                   <p className="text-xs text-gray-400">Clients</p>
-                </div>
-                <div>
+                </div> */}
+                {/* <div>
                   <p className="text-xl font-bold text-emerald-400">100%</p>
                   <p className="text-xs text-gray-400">Satisfaction</p>
-                </div>
+                </div> */}
               </div>
               
             </div>

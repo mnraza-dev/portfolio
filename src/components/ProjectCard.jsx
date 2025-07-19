@@ -2,7 +2,7 @@ import React from 'react';
 import GithubIcon from '/assets/github.svg';
 import LiveIcon from '/assets/live.png';
 
-const ProjectCard = ({ title, repo, href, image, description, year, type = 'Web Development', tags = [], index }) => {
+const ProjectCard = ({ title, repo, href, image, description, year, type = 'Web Dev', tags = [], index }) => {
 
   return (
     <div className="mb-12 flex items-start justify-center group">
@@ -25,7 +25,7 @@ const ProjectCard = ({ title, repo, href, image, description, year, type = 'Web 
           <div className="p-5 border-b border-gray-800/50">
             <div className="flex justify-between items-start mb-2">
               <h3 className="text-xl font-bold text-white">{title}</h3>
-              <span className="px-2 py-1 text-xs rounded-md bg-gray-800/80 backdrop-blur-sm text-cyan-400 border border-cyan-500/30">
+              <span className="px-4 py-1 text-xs rounded-md bg-gray-800/80 backdrop-blur-sm text-cyan-400 border border-cyan-500/30 whitespace-nowrap min-w-[90px] text-center font-semibold">
                 {type}
               </span>
             </div>
@@ -70,6 +70,7 @@ const ProjectCard = ({ title, repo, href, image, description, year, type = 'Web 
                 )}
               </div>
             </div>
+           
           </div>
         </div>
       </div>
