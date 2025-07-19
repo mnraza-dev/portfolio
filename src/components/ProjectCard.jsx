@@ -1,10 +1,13 @@
 import React from 'react';
+import GithubIcon from '/assets/github.svg';
+import LiveIcon from '/assets/live.png';
 
-const ProjectCard = ({ title, image, description, year, type = 'Web Development', tags = [], index }) => {
+const ProjectCard = ({ title, repo, href, image, description, year, type = 'Web Development', tags = [], index }) => {
+
   return (
     <div className="mb-12 flex items-start justify-center group">
       <div className="relative flex flex-col w-full max-w-2xl mx-auto">
-        {/* Card content with image inside */}
+      
         <div className="rounded-xl bg-gradient-to-br from-gray-900/60 via-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-gray-800 hover:border-cyan-500/30 overflow-hidden transition-all duration-300 relative shadow-lg group-hover:scale-[1.025] group-hover:shadow-cyan-500/10 w-full">
           {/* Optional year badge in top right */}
           {year && (
@@ -12,7 +15,7 @@ const ProjectCard = ({ title, image, description, year, type = 'Web Development'
               {year}
             </div>
           )}
-
+          {/* Full-width project image inside card */}
           {image && (
             <div className="w-full aspect-[16/9] bg-gray-900 border-b border-gray-800 overflow-hidden">
               <img src={image} alt={title} className="w-full h-full object-cover rounded-t-xl" />
@@ -44,45 +47,29 @@ const ProjectCard = ({ title, image, description, year, type = 'Web Development'
               </div>
             </div>
             <div className="flex items-center justify-between mt-4">
-              <button className="text-sm font-medium text-cyan-400 hover:text-cyan-300 transition-colors flex items-center">
-                <svg
-                  className="w-4 h-4 mr-1"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
-                </svg>
-                View Details
-              </button>
-              <div className="flex space-x-2">
-                <div className="w-8 h-8 rounded-full bg-gray-800 border border-gray-700 flex items-center justify-center text-gray-500 cursor-not-allowed">
-                  <svg
-                    stroke="currentColor"
-                    fill="currentColor"
-                    strokeWidth="0"
-                    viewBox="0 0 448 512"
-                    height="14"
-                    width="14"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path d="M400 224h-24v-72C376 68.2 307.8 0 224 0S72 68.2 72 152v72H48c-26.5 0-48 21.5-48 48v192c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V272c0-26.5-21.5-48-48-48zm-104 0H152v-72c0-39.7 32.3-72 72-72s72 32.3 72 72v72z"></path>
-                  </svg>
-                </div>
-                <div className="w-8 h-8 rounded-full bg-gray-800 border border-gray-700 flex items-center justify-center text-gray-500 cursor-not-allowed">
-                  <svg
-                    stroke="currentColor"
-                    fill="currentColor"
-                    strokeWidth="0"
-                    viewBox="0 0 448 512"
-                    height="14"
-                    width="14"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path d="M400 224h-24v-72C376 68.2 307.8 0 224 0S72 68.2 72 152v72H48c-26.5 0-48 21.5-48 48v192c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V272c0-26.5-21.5-48-48-48zm-104 0H152v-72c0-39.7 32.3-72 72-72s72 32.3 72 72v72z"></path>
-                  </svg>
-                </div>
+              <div className="flex gap-4 items-center">
+                {href && (
+                  <a
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="cursor-pointer text-sm font-medium text-cyan-400 hover:text-cyan-300 transition-colors flex items-center">
+                    <img src={LiveIcon} className="h-6 w-6 text-neutral-500 dark:text-neutral-300" />
+                    Live Demo
+                  </a>
+                )}
+                {repo && (
+                  <a
+                    href={repo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-cyan-400 transition-colors flex items-center"
+                    title="View source on GitHub">
+                    <img src={GithubIcon} className="h-6 w-6 text-neutral-500 dark:text-neutral-300" />
+                  </a>
+                )}
               </div>
             </div>
-            <div className="h-0.5 w-full bg-gradient-to-r from-cyan-500/10 via-teal-500/20 to-emerald-500/30"></div>
           </div>
         </div>
       </div>

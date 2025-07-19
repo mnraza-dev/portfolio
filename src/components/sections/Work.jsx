@@ -51,6 +51,8 @@ const Work = () => {
             year={project.year}
             type={project.type}
             tags={project.tags}
+            href={project.href}
+            repo={project.repo}
             index={idx}
           />
         ))}
