@@ -1,31 +1,6 @@
 import React, { useState, useCallback, useMemo, memo, useRef, useEffect } from 'react';
 import { skills } from '../../constants/index.js';
 
-// Lazy load shuttle animation
-const ShuttleAnimation = memo(() => {
-  const [isVisible, setIsVisible] = useState(false);
-  
-  useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 100);
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (!isVisible) return null;
-
-  return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      <div className="shuttle-container">
-        <div className="shuttle">
-          <div className="shuttle-body">
-            <div className="shuttle-window"></div>
-            <div className="shuttle-engine"></div>
-          </div>
-          <div className="shuttle-trail"></div>
-        </div>
-      </div>
-    </div>
-  );
-});
 const COLOR_THEMES = {
   cyan: {
     title: "text-cyan-400",
@@ -69,7 +44,7 @@ const COLOR_THEMES = {
   }
 };
 
-// Optimized skill pill component with intersection observer
+// Optimized skill pill component
 const SkillPill = memo(({ 
   skill, 
   index, 
@@ -82,22 +57,7 @@ const SkillPill = memo(({
   onDragEnd, 
   onImageError 
 }) => {
-  const pillRef = useRef(null);
-  const [isInView, setIsInView] = useState(false);
   const [imageError, setImageError] = useState(false);
-  
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => setIsInView(entry.isIntersecting),
-      { threshold: 0.1 }
-    );
-    
-    if (pillRef.current) {
-      observer.observe(pillRef.current);
-    }
-    
-    return () => observer.disconnect();
-  }, []);
 
   const showImage = skill.image && !imageError && !hasImageError;
   
@@ -108,7 +68,6 @@ const SkillPill = memo(({
   
   return (
     <div 
-      ref={pillRef}
       draggable
       onDragStart={(e) => onDragStart(e, index)}
       onDragOver={onDragOver}
@@ -116,12 +75,7 @@ const SkillPill = memo(({
       onDragEnd={onDragEnd}
       className={`bg-gray-900/50 backdrop-blur-sm border border-gray-800 ${colors.border} rounded-full px-4 py-2 transition-all duration-300 hover:shadow-lg ${colors.shadow} group flex items-center gap-2 cursor-grab active:cursor-grabbing select-none ${
         isDragging ? 'opacity-50 scale-95' : ''
-      } ${isInView ? 'animate-fade-in' : 'opacity-0'}`} 
-      style={{ 
-        opacity: 1, 
-        transform: 'none',
-        animationDelay: `${index * 50}ms`
-      }}
+      }`} 
     >
       {showImage ? (
         <div className={`${colors.icon} transition-colors`}>
@@ -196,8 +150,8 @@ const SkillSection = memo(({ title, skillsList, color = "cyan" }) => {
   }, []);
 
   return (
-    <div className="space-y-6" style={{ opacity: 1 }}>
-      <div className="mb-12 text-center" style={{ opacity: 1, transform: 'none' }}>
+    <div className="space-y-6">
+      <div className="mb-12 text-center">
         <h3 className={`text-2xl font-bold ${colors.title} inline-block relative`}>
           {title}
           <div className={`absolute -bottom-2 left-0 right-0 h-0.5 ${colors.underline}`}></div>
@@ -258,18 +212,18 @@ const TechnicalSkills = memo(() => {
 
   // Memoized header content
   const headerContent = useMemo(() => (
-    <div className="text-center mb-16" style={{ opacity: 1 }}>
-      <div className="inline-block" style={{ opacity: 1, transform: 'none' }}>
+    <div className="text-center mb-16">
+      <div className="inline-block">
         <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 mb-4">
           <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 mr-2"></span>
           <span className="tracking-wider">MY EXPERTISE</span>
         </span>
       </div>
-      <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent" style={{ opacity: 1, transform: 'none' }}>
+      <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
         Technical{' '}
         <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">Expertise</span>
       </h2>
-      <p className="max-w-3xl mx-auto text-xl text-gray-400 leading-relaxed" style={{ opacity: 1, transform: 'none' }}>
+      <p className="max-w-3xl mx-auto text-xl text-gray-400 leading-relaxed">
         With <b>10+</b> years of experience, I've developed a comprehensive skill set spanning frontend, backend, mobile development, cybersecurity, and server administration.
       </p>
     </div>
@@ -287,7 +241,6 @@ const TechnicalSkills = memo(() => {
 
   return (
     <section ref={sectionRef} className="relative">
-      <ShuttleAnimation />
       {headerContent}
       
       <div className="space-y-16">
