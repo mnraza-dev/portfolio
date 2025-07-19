@@ -329,6 +329,7 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
 };
 
 export const workExperiences = [
+  
   {
     year: '2022',
     icon: 'https://xebia.com/wp-content/uploads/2021/11/XebiaLogo-white.svg',
