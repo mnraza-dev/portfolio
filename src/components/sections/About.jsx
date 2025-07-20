@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Globe from 'react-globe.gl';
 import Button from '../Button';
 const About = () => {
   const [hasCopied, setHasCopied] = useState(false);

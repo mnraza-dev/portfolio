@@ -557,10 +557,6 @@ export const skills = {
       name: 'Stripe',
       image: '/assets/skills/stripe.svg',
     },
-    {
-      id: 24,
-      name: 'AMP',
-      image: '/assets/skills/amp.svg',
-    },
+    
   ],
 };
