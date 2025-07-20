@@ -2,7 +2,7 @@ import { workExperiences } from '../../constants/index.js';
 import React from 'react';
 
 // Ensure the second item is reversed (right side)
-const timelineData = workExperiences.map((item, idx) => idx === 1 ? { ...item, reverse: true } : item);
+const timelineData = workExperiences.map((item, idx) => (idx === 1 ? { ...item, reverse: true } : item));
 
 const Experience = () => {
   return (
@@ -126,8 +126,9 @@ const Experience = () => {
                           {item.technologies.map((tech, i) => (
                             <span
                               key={i}
-                              className="px-2 py-1 text-xs rounded-md bg-gray-800/80 text-gray-300 border border-gray-700/50">
-                              {tech}
+                              className="px-2 flex items-center gap-2 py-1 text-xs rounded-md bg-gray-800/80 text-gray-300 border border-gray-700/50">
+                              <img src={tech.image} className="w-4 h-4 " />
+                              {tech.name}
                             </span>
                           ))}
                         </div>
