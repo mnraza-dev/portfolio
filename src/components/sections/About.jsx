@@ -1,55 +1,8 @@
 import React, { useState } from 'react';
 import Button from '../Button';
 import { skills } from '../../constants/index.js';
-import TechnicalSkills from './TechnicalSkills';
-
-// Extract SkillPill from TechnicalSkills.jsx
-// (If not exported, copy the SkillPill component here)
-
-// SkillPill UI (copied from TechnicalSkills.jsx, without drag-and-drop)
-const COLOR_THEMES = {
-  cyan: {
-    border: 'hover:border-cyan-500/30',
-    shadow: 'hover:shadow-cyan-900/10',
-    icon: 'text-cyan-400 group-hover:text-cyan-300',
-  },
-  emerald: {
-    border: 'hover:border-emerald-500/30',
-    shadow: 'hover:shadow-emerald-900/10',
-    icon: 'text-emerald-400 group-hover:text-emerald-300',
-  },
-};
-
-const SkillPill = ({ skill, color = 'cyan' }) => {
-  const [imageError, setImageError] = React.useState(false);
-  const theme = COLOR_THEMES[color] || COLOR_THEMES.cyan;
-  const showImage = skill.image && !imageError;
-  return (
-    <div
-      className={`bg-gray-900/50 backdrop-blur-sm border border-gray-800 ${theme.border} rounded-full px-4 py-2 transition-all duration-300 hover:shadow-lg ${theme.shadow} group flex items-center gap-2 select-none cursor-pointer`}>
-      {showImage ? (
-        <div className={`${theme.icon} transition-colors`}>
-          <img
-            src={skill.image}
-            alt={skill.name}
-            height="20"
-            width="20"
-            className="rounded-full"
-            draggable={false}
-            onError={() => setImageError(true)}
-            loading="lazy"
-          />
-        </div>
-      ) : (
-        <div
-          className={`${theme.icon} transition-colors w-5 h-5 rounded-full bg-current opacity-20 flex items-center justify-center`}>
-          <span className="text-xs text-gray-500">{skill.name.charAt(0)}</span>
-        </div>
-      )}
-      <span className="text-sm font-medium text-white group-hover:text-gray-100 transition-colors">{skill.name}</span>
-    </div>
-  );
-};
+import SkillPill from '../SkillPill';
+import confetti from 'canvas-confetti';
 
 const About = () => {
   const [hasCopied, setHasCopied] = useState(false);
@@ -57,7 +10,13 @@ const About = () => {
   const handleCopy = () => {
     navigator.clipboard.writeText('noorullahraza007@gmail.com');
     setHasCopied(true);
-
+    if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+      confetti({
+        particleCount: 100,
+        spread: 90,
+        origin: { y: 0.7 },
+      });
+    }
     setTimeout(() => {
       setHasCopied(false);
     }, 2000);
@@ -121,10 +80,11 @@ const About = () => {
               </div>
             </div>
             <div className="flex flex-col gap-3 mt-6 mb-4">
-              <p className="grid-headtext">My Passion for coding and design</p>
+              <p className="grid-headtext">My Passion for Coding and Design</p>
               <p className="grid-subtext ">
-                I ❤️ solving problems and building things through code. Coding isn't just my profession - it is my
-                passion 🚀
+                Coding isn’t just my job—it’s my passion.
+                <br />I ❤️ solving problems, building creative solutions, and turning ideas into reality through code.
+                Every project is a chance to learn, create, and make an impact. 🚀
               </p>
             </div>
           </div>
@@ -146,28 +106,17 @@ const About = () => {
         </div>
         {/* 2. Frontend Tech Stack */}
         <div className="grid-container bg-white/5 backdrop-blur-md border border-white/10 shadow-xl rounded-2xl p-6 flex flex-col justify-start">
-          <p className="grid-headtext bg-gradient-to-r from-cyan-400 via-emerald-400 to-cyan-400 bg-clip-text text-transparent text-xl font-bold mb-4">Tech Stack</p>
-          <span className="mt-2 flex flex-wrap justify-start gap-3">
+          <p className="grid-headtext bg-gradient-to-r from-cyan-400 via-emerald-400 to-cyan-400 bg-clip-text text-transparent text-xl font-bold mb-0">
+            Tech Stack
+          </p>
+          <span className="mt-0 flex flex-wrap justify-start gap-3">
             {skills.frontend.map((tech) => (
-              <SkillPill key={tech.id} skill={tech} color="cyan" />
+              <SkillPill key={tech.id} skill={tech} colors={{ border: 'hover:border-cyan-500/30', shadow: 'hover:shadow-cyan-900/10', icon: 'text-cyan-400 group-hover:text-cyan-300' }} />
             ))}
           </span>
         </div>
-       
-        <div className="grid-container bg-white/5 backdrop-blur-md border border-white/10 shadow-xl rounded-2xl p-6 transition-all duration-300 hover:shadow-cyan-500/10">
-          <div className="space-y-8">
-            
-            <div className="border-t border-white/10 pt-6">
-              {/* <p className="grid-headtext bg-gradient-to-r from-pink-400 to-fuchsia-400 bg-clip-text text-transparent text-xl font-bold mb-2 text-center">AI & Machine Learning</p>
-              <div className="mt-2 flex flex-wrap justify-center gap-3">
-                {skills.ai_ml.map((ai) => (
-                  <SkillPill key={ai.id} skill={ai} color="pink" />
-                ))}
-              </div> */}
-            </div>
-          
-          </div>
-        </div>
+
+        <div className="grid-container bg-white/5 backdrop-blur-md border border-white/10 shadow-xl rounded-2xl p-6 transition-all duration-300 hover:shadow-cyan-500/10"></div>
       </div>
     </section>
   );
