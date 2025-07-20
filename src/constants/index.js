@@ -576,11 +576,11 @@ export const skills = {
       name: 'Tailwind CSS',
       image: '/assets/skills/tailwindcss.png',
     },
-    {
-      id: 7,
-      name: 'Angular',
-      image: '/assets/skills/angular.svg',
-    },
+    // {
+    //   id: 7,
+    //   name: 'Angular',
+    //   image: '/assets/skills/angular.svg',
+    // },
     {
       id: 8,
       name: 'Material UI',
