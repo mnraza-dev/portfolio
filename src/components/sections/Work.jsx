@@ -1,6 +1,44 @@
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { myProjects } from '../../constants';
 import ProjectCard from '../ProjectCard';
+
+// Reusable LazyVideo component
+const LazyVideo = ({ src, poster, ...props }) => {
+  const videoRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new window.IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+    if (videoRef.current) {
+      observer.observe(videoRef.current);
+    }
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div ref={videoRef} style={{ minHeight: 200 }}>
+      {isVisible && (
+        <video
+          src={src}
+          poster={poster}
+          controls
+          preload="none"
+          width="100%"
+          height="auto"
+          {...props}
+        />
+      )}
+    </div>
+  );
+};
 
 const Work = () => {
   return (
