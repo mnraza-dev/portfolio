@@ -63,6 +63,7 @@ const Contact = () => {
           className="mt-0 absolute inset-0 min-h-screen"
           src="/assets/terminal.png"
           alt="Terminal Background Image"
+          loading="lazy"
         />
         <div className="contact-container ">
           <h3 className="head-text mt-12">Let's Talk</h3>
@@ -126,6 +127,7 @@ const Contact = () => {
                 src="/assets/arrow-up.png"
                 alt="Arrow Image"
                 className="field-btn_arrow"
+                loading="lazy"
               />
             </button>
           </form>

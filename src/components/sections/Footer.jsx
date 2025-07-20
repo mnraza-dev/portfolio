@@ -81,7 +81,7 @@ const Footer = () => {
           },
           {
             title: 'Instagram',
-            icon: <img src="/assets/instagram.svg" alt="Instagram" className="w-6 h-6" />,
+            icon: <img src="/assets/instagram.svg" alt="Instagram" className="w-6 h-6" loading="lazy" />,
             href: 'https://www.instagram.com/mnraza_/',
           },
         ]}

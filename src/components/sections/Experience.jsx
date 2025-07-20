@@ -127,7 +127,7 @@ const Experience = () => {
                             <span
                               key={i}
                               className="px-2 flex items-center gap-2 py-1 text-xs rounded-md bg-gray-800/80 text-gray-300 border border-gray-700/50">
-                              <img src={tech.image} className="w-4 h-4 " />
+                              <img src={tech.image} className="w-4 h-4 " loading="lazy" />
                               {tech.name}
                             </span>
                           ))}

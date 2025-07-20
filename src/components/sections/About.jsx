@@ -64,6 +64,7 @@ const About = () => {
               src="/assets/mnraza-dev.png"
               alt="Grid container image"
               className="w-44 h-auto object-cover rounded-full"
+              loading="lazy"
             />
             <p className="grid-headtext mb-1">Md Noorullah Raza</p>
             <p className="grid-subtext mb-1">Frontend Developer</p>
@@ -97,10 +98,10 @@ const About = () => {
           </a>
         </div>
         <div className="grid-container flex flex-col items-center justify-center bg-white/5 backdrop-blur-md border border-white/10 shadow-xl rounded-2xl p-6">
-          <img src="/assets/grid4.png" alt="Contact" className="w-full h-32 object-cover rounded-xl mb-4" />
+          <img src="/assets/grid4.png" alt="Contact" className="w-full h-32 object-cover rounded-xl mb-4" loading="lazy" />
           <p className="grid-subtext text-center">Contact Me</p>
           <div onClick={handleCopy} className="copy-container text-white-500 cursor-pointer">
-            <img src={hasCopied ? '/assets/tick.svg' : '/assets/copy.svg'} alt="" />
+            <img src={hasCopied ? '/assets/tick.svg' : '/assets/copy.svg'} alt="" loading="lazy" />
             {hasCopied ? <p>Copied Email</p> : <p>Copy Email</p>}
           </div>
         </div>

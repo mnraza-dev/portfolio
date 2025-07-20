@@ -24,6 +24,7 @@ const Navbar = () => {
               src={isOpen ? "assets/close.svg" : "assets/menu.svg"}
               alt="Toggle Menu"
               className="w-6 h-6"
+              loading="lazy"
             />
           </button>
           <nav className="hidden sm:block">

@@ -31,7 +31,7 @@ const Experience = () => {
                 <div className="work-content_container text-white-800 group" key={id}>
                   <div className="flex flex-col h-full py-2 items-center justify-start ">
                     <div className={`work-content_logo ${name==="Xebia" ?'blob-xebia':'' }`} >
-                      <img src={icon} alt="Logo" className="w-full h-full" />
+                      <img src={icon} alt="Logo" className="w-full h-full" loading="lazy" />
                     </div>
                     <div className="work-content_bar" />
                   </div>
