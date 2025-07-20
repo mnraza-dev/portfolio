@@ -145,8 +145,8 @@ const About = () => {
           </div>
         </div>
         {/* 2. Frontend Tech Stack */}
-        <div className="grid-container bg-white/5 backdrop-blur-md border border-white/10 shadow-xl rounded-2xl p-6 flex flex-col justify-center">
-          <p className="grid-headtext bg-gradient-to-r from-cyan-400 via-emerald-400 to-cyan-400 bg-clip-text text-transparent text-xl font-bold mb-4 text-center">Tech Stack</p>
+        <div className="grid-container bg-white/5 backdrop-blur-md border border-white/10 shadow-xl rounded-2xl p-6 flex flex-col justify-start">
+          <p className="grid-headtext bg-gradient-to-r from-cyan-400 via-emerald-400 to-cyan-400 bg-clip-text text-transparent text-xl font-bold mb-4">Tech Stack</p>
           <span className="mt-2 flex flex-wrap justify-start gap-3">
             {skills.frontend.map((tech) => (
               <SkillPill key={tech.id} skill={tech} color="cyan" />

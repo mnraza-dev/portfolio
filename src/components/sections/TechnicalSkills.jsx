@@ -240,18 +240,47 @@ const TechnicalSkills = memo(() => {
   }
 
   return (
-    <section ref={sectionRef} className="relative">
-      {headerContent}
-      
-      <div className="space-y-16">
-        {skillSections.map((section, index) => (
-          <SkillSection
-            key={`${section.title}-${index}`}
-            title={section.title}
-            skillsList={section.skillsList}
-            color={section.color}
-          />
-        ))}
+    <section
+      ref={sectionRef}
+      className="relative py-20 px-4 md:px-8 bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 overflow-hidden"
+    >
+      <div className="max-w-6xl mx-auto">
+        <div className="mb-16 text-center">
+          <div className="inline-block">
+            <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 mb-4">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 mr-2"></span>
+              <span className="tracking-wider">MY EXPERTISE</span>
+            </span>
+          </div>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
+            Technical{' '}
+            <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">Expertise</span>
+          </h2>
+          <div className="flex justify-center mb-6">
+            <span className="block w-24 h-1 rounded-full bg-gradient-to-r from-emerald-400/30 via-cyan-400/40 to-purple-400/30"></span>
+          </div>
+          <p className="max-w-3xl mx-auto text-xl text-gray-400 leading-relaxed">
+            With <b>10+</b> years of experience, I've developed a comprehensive skill set spanning frontend, backend, mobile development, cybersecurity, and server administration.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+          {skillSections.map((section, index) => (
+            <div key={`${section.title}-${index}`} className="relative">
+              <SkillSection
+                title={section.title}
+                skillsList={section.skillsList}
+                color={section.color}
+              />
+              {index !== skillSections.length - 1 && (
+                <div className="hidden md:block absolute -right-8 top-0 h-full w-0.5 bg-gradient-to-b from-transparent via-gray-800/60 to-transparent" />
+              )}
+              {index !== skillSections.length - 1 && (
+                <div className="block md:hidden my-10 h-0.5 w-2/3 mx-auto bg-gradient-to-r from-transparent via-gray-800/60 to-transparent" />
+              )}
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
