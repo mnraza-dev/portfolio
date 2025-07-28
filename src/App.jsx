@@ -6,7 +6,6 @@ import Footer from "./components/sections/Footer";
 import Experience from "./components/sections/Experience";
 import Work from "./components/sections/Work";
 import TechnicalSkills from "./components/sections/TechnicalSkills";
-
 export default function App() {
   return (
     <main className="max-w-7xl mx-auto">
