@@ -56,9 +56,8 @@ const About = () => {
           I'm a full-stack developer passionate about building elegant solutions that solve real-world problems.
         </p>
       </div>
-      <div className="grid grid-cols-1 xl:grid-cols-3 xl:grid-rows-2 gap-6 h-full">
-        {/* 1. Profile/Stats (tall left) */}
-        <div className="grid-container flex flex-col items-center justify-center xl:row-span-2 bg-white/5 backdrop-blur-md border border-white/10 shadow-xl rounded-2xl p-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-3 md:grid-rows-2 xl:grid-rows-2 gap-6 h-full">
+        <div className="grid-container flex flex-col items-center justify-center md:row-span-2 xl:row-span-2 bg-white/5 backdrop-blur-md border border-white/10 shadow-xl rounded-2xl p-6">
           <div className="flex flex-col items-center justify-center">
             <img
               src="/assets/mnraza-dev.png"
@@ -83,7 +82,7 @@ const About = () => {
             <div className="flex flex-col gap-3 mt-6 mb-4">
               <p className="grid-headtext">My Passion for Coding and Design</p>
               <p className="grid-subtext ">
-                Coding isn’t just my job—it’s my passion.
+                Coding isn't just my job—it's my passion.
                 <br />I ❤️ solving problems, building creative solutions, and turning ideas into reality through code.
                 Every project is a chance to learn, create, and make an impact. 🚀
               </p>
@@ -105,7 +104,6 @@ const About = () => {
             {hasCopied ? <p>Copied Email</p> : <p>Copy Email</p>}
           </div>
         </div>
-        {/* 2. Frontend Tech Stack */}
         <div className="grid-container bg-white/5 backdrop-blur-md border border-white/10 shadow-xl rounded-2xl p-6 flex flex-col justify-start">
           <p className="grid-headtext bg-gradient-to-r from-cyan-400 via-emerald-400 to-cyan-400 bg-clip-text text-transparent text-xl font-bold mb-0">
             Tech Stack
