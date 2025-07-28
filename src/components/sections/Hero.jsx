@@ -3,7 +3,7 @@ import { Canvas } from '@react-three/fiber';
 import React, { Suspense, useState, useEffect } from 'react';
 
 import { useMediaQuery } from 'react-responsive';
-import { calculateSizes } from '../../constants/index.js';
+import { calculateSizes, skills } from '../../constants/index.js';
 import Button from '../Button.jsx';
 import { IconArrowRight } from '@tabler/icons-react';
 
@@ -17,12 +17,7 @@ const Hero = () => {
   const [isTyping, setIsTyping] = useState(true);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
-  const roleTexts = [
-    'Product Builder',
-    'Software Developer',
-    'Frontend Developer',
-    'Tech Enthusiast',
-  ];
+  const roleTexts = ['Product Builder', 'Software Developer', 'Frontend Developer', 'Tech Enthusiast'];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -89,22 +84,22 @@ const Hero = () => {
                 <span className="text-teal-400 font-medium"> secure systems</span>.
               </p>
             </div>
-            <div className="grid grid-cols-2 gap-4 w-fit mx-auto">
+            <div className="flex flex-wrap gap-4 w-fit mx-auto">
               <span className="w-fit px-4 py-2 border rounded-full text-sm font-medium backdrop-blur-sm shadow-sm transition-all duration-300 cursor-default flex items-center gap-2 bg-emerald-900/20 border-emerald-500/30 text-emerald-300 hover:border-emerald-400/60 hover:shadow-emerald-500/20">
-                <span className="text-base">⚛️</span>
-                <span>React & Next.js</span>
+                <img src={skills.frontend[2].image} alt="React" className="w-4 h-4" loading="lazy" />
+                <span>{skills.frontend[2].name}</span>
               </span>
               <span className="w-fit px-4 py-2 border rounded-full text-sm font-medium backdrop-blur-sm shadow-sm transition-all duration-300 cursor-default flex items-center gap-2 bg-cyan-900/20 border-cyan-500/30 text-cyan-300 hover:border-cyan-400/60 hover:shadow-cyan-500/20">
-                <span className="text-base">📱</span>
-                <span>React Native</span>
+                <img src={skills.frontend[1].image} alt="TypeScript" className="w-4 h-4" loading="lazy" />
+                <span>{skills.frontend[1].name}</span>
               </span>
               <span className="w-fit px-4 py-2 border rounded-full text-sm font-medium backdrop-blur-sm shadow-sm transition-all duration-300 cursor-default flex items-center gap-2 bg-cyan-900/20 border-cyan-500/30 text-cyan-300 hover:border-cyan-400/60 hover:shadow-cyan-500/20">
-                <span className="text-base">🔋</span>
-                <span>Node.js & MongoDB</span>
+                <img src={skills.backend[0].image} alt="Node.js" className="w-4 h-4" loading="lazy" />
+                <span>{skills.backend[0].name}</span>
               </span>
               <span className="w-fit px-4 py-2 border rounded-full text-sm font-medium backdrop-blur-sm shadow-sm transition-all duration-300 cursor-default flex items-center gap-2 bg-emerald-900/20 border-emerald-500/30 text-emerald-300 hover:border-emerald-400/60 hover:shadow-emerald-500/20">
-                <span className="text-base">🔐</span>
-                <span>TypeScript</span>
+                <img src={skills.backend[2].image} alt="MongoDB" className="w-4 h-4" loading="lazy" />
+                <span>{skills.backend[2].name}</span>
               </span>
             </div>
 
@@ -130,9 +125,9 @@ const Hero = () => {
           </div>
         </div>
         {/* Right-side developer profile card */}
-        <div className="w-full max-w-xl mx-auto mt-10 flex-shrink-0 flex justify-center items-start lg:mt-0">
-          <div className="bg-gray-950/80 backdrop-blur-md rounded-2xl border border-emerald-900/30 p-12 font-mono text-sm shadow-2xl w-full max-w-xl flex flex-col gap-6">
-            <div className="flex items-center gap-2 mb-8 pb-4 border-b border-gray-800/80">
+        <div className="w-full max-w-xl mx-auto mt-0 flex-shrink-0 flex justify-center items-start lg:mt-0">
+          <div className="bg-gray-950/80 backdrop-blur-md rounded-2xl border border-emerald-900/30 px-10 py-4 font-mono text-sm shadow-2xl w-full max-w-xl flex flex-col gap-6">
+            <div className="flex items-center gap-2 mb-0 pb-4 border-b border-gray-800/80">
               <div className="flex gap-2">
                 <div className="w-3 h-3 bg-red-500 rounded-full shadow-sm shadow-red-500/20"></div>
                 <div className="w-3 h-3 bg-yellow-500 rounded-full shadow-sm shadow-yellow-500/20"></div>
@@ -143,7 +138,8 @@ const Hero = () => {
             <div className="space-y-4 text-sm">
               <div className="text-gray-500">// Professional Developer Profile</div>
               <div>
-                <span className="text-purple-400">const</span> <span className="text-blue-300">developer</span> = {'{'}</div>
+                <span className="text-purple-400">const</span> <span className="text-blue-300">developer</span> = {'{'}
+              </div>
               <div className="ml-4">
                 <span className="text-emerald-400">name</span>:{' '}
                 <span className="text-yellow-300">"Md Noorullah Raza"</span>,
@@ -159,16 +155,22 @@ const Hero = () => {
               <div className="ml-4">
                 <span className="text-emerald-400">technologies</span>: [
               </div>
-              <div className="ml-8">
-                <span className="text-yellow-300">"JavaScript"</span>,{' '}
-                <span className="text-yellow-300">"React.js"</span>,
+              <div className='ml-8'>
+              <span className="text-yellow-300">"JavaScript"</span>,{' '}
+              <span className="text-yellow-300">"TypeScript"</span>,{' '}
               </div>
               <div className="ml-8">
-                <span className="text-yellow-300">"Next.js"</span>, <span className="text-yellow-300">"Express"</span>,
+
+                <span className="text-yellow-300">"React.js"</span>,{' '}
+                <span className="text-yellow-300">"Next.js"</span>,{' '}
               </div>
               <div className="ml-8">
-                <span className="text-yellow-300">"TypeScript"</span>,{' '}
-                <span className="text-yellow-300">"MongoDB"</span>
+                <span className="text-yellow-300">"Node.js"</span>, {' '}
+                <span className="text-yellow-300">"Express"</span>,
+              </div>
+              <div className="ml-8">
+                <span className="text-yellow-300">"MongoDB"</span> {' '}
+                <span className="text-yellow-300">"PostgreSQL"</span>
               </div>
               <div className="ml-4">],</div>
               <div className="ml-4">
