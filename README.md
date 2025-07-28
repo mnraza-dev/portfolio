@@ -39,19 +39,17 @@ Visit the live website: [https://mnraza.vercel.app/](https://mnraza.vercel.app/)
 ## 📁 Project Structure
 
 - `src/components/` - React components
-- `src/sections/` - Page sections
+- `src/sections/`  - Page sections
 - `public/assets/` - Static assets
 - `public/models/` - 3D models
 - `public/textures/` - Textures for 3D models
 
 ## 🎨 Customization
-
 The portfolio can be easily customized by:
 - Updating personal information in components
 - Replacing 3D models in the `public/models/` directory
 - Modifying styles using Tailwind CSS classes
 - Adding new sections as needed
-
 ## 📄 License
 
 This project is open source and available under the [MIT License](LICENSE).

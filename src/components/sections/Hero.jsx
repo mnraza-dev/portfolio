@@ -18,9 +18,8 @@ const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   const roleTexts = [
-    'Software Developer',
     'Product Builder',
-    'Problem Solver',
+    'Software Developer',
     'Frontend Developer',
     'Tech Enthusiast',
   ];
@@ -77,7 +76,7 @@ const Hero = () => {
                   </span>
                 </h1>
                 <h2 className="text-2xl md:text-3xl lg:text-4xl font-light text-gray-400 tracking-wide">
-                  Frontend Developer
+                  {roleTexts[currentTextIndex]}
                 </h2>
               </div>
             </div>

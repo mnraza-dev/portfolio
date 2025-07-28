@@ -588,7 +588,7 @@ export const skills = {
     },
     {
       id: 9,
-      name: 'Redux Toolkit',
+      name: 'Redux',
       image: '/assets/skills/redux.svg',
     },
   ],
@@ -630,11 +630,11 @@ export const skills = {
       name: 'Linux',
       image: '/assets/skills/linux.svg',
     },
-    {
-      id: 17,
-      name: 'Ansible',
-      image: '/assets/skills/ansible.svg',
-    },
+    // {
+    //   id: 17,
+    //   name: 'Ansible',
+    //   image: '/assets/skills/ansible.svg',
+    // },
   ],
   mobile: [
     {
@@ -649,11 +649,11 @@ export const skills = {
     },
   ],
   ai_ml: [
-    {
-      id: 20,
-      name: 'TensorFlow',
-      image: '/assets/skills/tensorflow.svg',
-    },
+    // {
+    //   id: 20,
+    //   name: 'TensorFlow',
+    //   image: '/assets/skills/tensorflow.svg',
+    // },
   ],
   tools: [
     {
