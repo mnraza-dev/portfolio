@@ -14,22 +14,43 @@ const Hero = () => {
   const sizes = calculateSizes(isSmall, isMobile, isTablet);
 
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
-  const [isTyping, setIsTyping] = useState(true);
+  const [currentText, setCurrentText] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   const roleTexts = ['Product Builder', 'Software Developer', 'Frontend Developer', 'Tech Enthusiast'];
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setIsTyping(false);
-      setTimeout(() => {
+    const currentRole = roleTexts[currentTextIndex];
+    
+    if (!isDeleting) {
+      // Typing effect
+      if (currentText.length < currentRole.length) {
+        const timeout = setTimeout(() => {
+          setCurrentText(currentRole.slice(0, currentText.length + 1));
+        }, 100);
+        return () => clearTimeout(timeout);
+      } else {
+        // Wait before starting to delete
+        const timeout = setTimeout(() => {
+          setIsDeleting(true);
+        }, 2000);
+        return () => clearTimeout(timeout);
+      }
+    } else {
+      // Deleting effect
+      if (currentText.length > 0) {
+        const timeout = setTimeout(() => {
+          setCurrentText(currentText.slice(0, currentText.length - 1));
+        }, 50);
+        return () => clearTimeout(timeout);
+      } else {
+        // Move to next text
+        setIsDeleting(false);
         setCurrentTextIndex((prev) => (prev + 1) % roleTexts.length);
-        setIsTyping(true);
-      }, 500);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, []);
+      }
+    }
+  }, [currentText, currentTextIndex, isDeleting, roleTexts]);
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -71,7 +92,8 @@ const Hero = () => {
                   </span>
                 </h1>
                 <h2 className="text-2xl md:text-3xl lg:text-4xl font-light text-gray-400 tracking-wide">
-                  {roleTexts[currentTextIndex]}
+                  {currentText}
+                  <span className="animate-pulse">|</span>
                 </h2>
               </div>
             </div>
@@ -104,23 +126,20 @@ const Hero = () => {
             </div>
 
             {/* CTA buttons */}
-            <div>
-              <div className="w-full c-space">
-                <div className="flex flex-col sm:flex-row items-center gap-6">
-                  <a className="w-fit group" href="#contact">
-                    <Button
-                      name={"Let's work together"}
-                      isBeam
-                      containerClass="sm:w-fit w-full sm:min-w-64  hover:shadow-xl transform  transition-all duration-300"
-                    />
-                  </a>
-                  <a className="w-fit group" href="#projects">
-                    <button className="w-full px-8 py-3 cursor-pointer border rounded-full text-sm font-medium backdrop-blur-sm shadow-sm transition-all duration-300 flex items-center gap-2 bg-emerald-900/20 border-emerald-500/30 text-emerald-300 hover:border-emerald-400/60 hover:shadow-emerald-500/20">
-                      View my work <IconArrowRight />
-                    </button>
-                  </a>
-                </div>
-              </div>
+            <div className="flex flex-col sm:flex-row items-center gap-6">
+              <a className="w-fit group" href="#contact">
+                <Button
+                  name={"Let's work together"}
+                  isBeam
+                  containerClass="sm:w-fit w-full sm:min-w-64  hover:shadow-xl transform  transition-all duration-300"
+                />
+              </a>
+              <a 
+                href="#projects"
+                className="w-fit px-8 py-3 cursor-pointer border rounded-full text-sm font-medium backdrop-blur-sm shadow-sm transition-all duration-300 flex items-center gap-2 bg-emerald-900/20 border-emerald-500/30 text-emerald-300 hover:border-emerald-400/60 hover:shadow-emerald-500/20 group"
+              >
+                View my work <IconArrowRight />
+              </a>
             </div>
           </div>
         </div>

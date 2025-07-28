@@ -649,11 +649,11 @@ export const skills = {
     },
   ],
   ai_ml: [
-    // {
-    //   id: 20,
-    //   name: 'TensorFlow',
-    //   image: '/assets/skills/tensorflow.svg',
-    // },
+    {
+      id: 20,
+      name: 'TensorFlow',
+      image: '/assets/skills/tensorflow.svg',
+    },
   ],
   tools: [
     {
