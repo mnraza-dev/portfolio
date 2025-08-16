@@ -63,6 +63,30 @@ export const clientReviews = [
 
 export const myProjects = [
   {
+    title: 'Persona AI – Custom AI Buddies',
+    desc: 'Persona AI is a platform that allows users to interact with customizable AI personas for conversations, productivity, and fun.',
+    subdesc:
+      'Built using Next.js, TypeScript, and Tailwind CSS with GenAI integration. Features include persona selection, chat interface, API key management, and real-time AI responses.',
+    href: 'https://ai-persona-mnraza.vercel.app/',
+    repo: 'https://github.com/mnraza-dev/persona_ai',
+    texture: '/textures/project/persona.mp4',
+    logo: '/assets/persona.gif',
+    logoStyle: {
+      backgroundColor: '#0E0E0E',
+      border: '0.2px solid #1A1A1A',
+      boxShadow: '0px 0px 60px 0px #10B98130',
+    },
+    spotlight: '/assets/spotlight1.png',
+    tags: [
+      { id: 1, name: 'TypeScript', path: '/assets/skills/typescript.svg' },
+      { id: 2, name: 'Next.js', path: '/assets/skills/nextjs.svg' },
+      { id: 3, name: 'Tailwind CSS', path: '/assets/skills/tailwindcss.png' },
+      { id: 4, name: 'Gemini AI', path: '/assets/skills/gemini.svg' },
+    ],
+    year: '2025',
+  },
+
+  {
     title: 'blyzr – No-Code App Builder (Bolt.new Clone)',
     desc: 'blyzr is a modern no-code platform inspired by Bolt.new that enables users to visually build and deploy web apps without writing code.',
     subdesc:
@@ -76,7 +100,7 @@ export const myProjects = [
       border: '0.2px solid #1A1A1A',
       boxShadow: '0px 0px 60px 0px #10B98130',
     },
-    spotlight: '/assets/spotlight-blyzr.png',
+    spotlight: '/assets/spotlight3.png',
     tags: [
       { id: 1, name: 'JavaScript', path: '/assets/skills/javascript.svg' },
       { id: 2, name: 'React.js', path: '/assets/skills/react.svg' },
@@ -100,7 +124,7 @@ export const myProjects = [
       border: '0.2px solid #1F1F1F',
       boxShadow: '0px 0px 60px 0px #FFFFFF1A',
     },
-    spotlight: '/assets/spotlight-tesla.png',
+    spotlight: '/assets/spotlight2.png',
     tags: [
       { id: 1, name: 'React.js', path: '/assets/skills/react.svg' },
       { id: 2, name: 'Responsive Design', path: '/assets/skills/responsive.png' },
@@ -123,7 +147,7 @@ export const myProjects = [
       border: '0.2px solid #1F2937',
       boxShadow: '0px 0px 60px 0px #3B82F630',
     },
-    spotlight: '/assets/spotlight-quicklink.png',
+    spotlight: '/assets/spotlight1.png',
     tags: [
       { id: 1, name: 'React.js', path: '/assets/skills/react.svg' },
       { id: 2, name: 'Tailwind CSS', path: '/assets/skills/tailwindcss.png' },

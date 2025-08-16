@@ -1,6 +1,6 @@
 import React from 'react';
 import GithubIcon from '/assets/github.svg';
-import LiveIcon from '/assets/live.png';
+import LiveIcon from '/assets/live.svg';
 
 const ProjectCard = ({ title, repo, href, image, description, year, type = 'Web Dev', tags = [], index }) => {
 
@@ -9,14 +9,12 @@ const ProjectCard = ({ title, repo, href, image, description, year, type = 'Web 
       <div className="relative flex flex-col w-full max-w-2xl mx-auto">
       
         <div className="rounded-xl bg-gradient-to-br from-gray-900/60 via-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-gray-800 hover:border-cyan-500/30 overflow-hidden transition-all duration-300 relative shadow-lg group-hover:scale-[1.025] group-hover:shadow-cyan-500/10 w-full">
-          {/* Optional year badge in top right */}
-          {year && (
+           {year && (
             <div className="absolute top-4 right-4 bg-gray-900 border-2 border-emerald-500 rounded-full px-3 py-1 text-xs font-bold text-emerald-400 shadow shadow-emerald-500/10 z-10">
               {year}
             </div>
           )}
-          {/* Full-width project image inside card */}
-          {image && (
+             {image && (
             <div className="w-full aspect-[16/9] bg-gray-900 border-b border-gray-800 overflow-hidden">
               <img src={image} alt={title} className="w-full h-full object-cover rounded-t-xl" />
             </div>
