@@ -6,7 +6,7 @@ const timelineData = workExperiences.map((item, idx) => (idx === 1 ? { ...item, 
 
 const Experience = () => {
   return (
-    <div className="mb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div id="experience" className="mb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div className="text-center mb-16" style={{ opacity: 1 }}>
         <div className="inline-block" style={{ opacity: 1, transform: 'none' }}>
           <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 mb-4">
