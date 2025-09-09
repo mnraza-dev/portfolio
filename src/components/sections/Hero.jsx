@@ -213,7 +213,7 @@ const Hero = () => {
                 </span>
                 <div className="flex gap-3">
                   <a
-                    href="https://twitter.com/noorullahraza1"
+                    href="https://twitter.com/mnraza_codes"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2.5 text-gray-400 transition-all duration-300 rounded-lg flex items-center justify-center relative overflow-hidden group"
