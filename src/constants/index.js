@@ -340,126 +340,125 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
 };
 
 export const workExperiences = [
-  {
-    year: '2022',
-    icon: 'https://xebia.com/wp-content/uploads/2021/11/XebiaLogo-white.svg',
-    company: 'Xebia',
-    location: 'Chennai',
-    duration: '2022 (May) - 2025 (March)',
-    title: 'Software Consultant',
-    description: 'Leading development of enterprise-level web applications and implementing cutting-edge solutions.',
-    responsibilities: [
-      'Architecting and developing scalable web applications using Next.js, React, and Node.js',
-      'Implementing advanced state management and optimizing application performance',
-      'Designing microservices architecture for high-traffic applications',
-      'Leading development team and maintaining code quality standards',
-      'Handling complex integrations and security implementations',
-    ],
-    technologies: [
-      {
-        id: 1,
-        name: 'JavaScript',
-        image: '/assets/skills/javascript.svg',
-      },
-      {
-        id: 2,
-        name: 'TypeScript',
-        image: '/assets/skills/typescript.svg',
-      },
-      {
-        id: 3,
-        name: 'React',
-        image: '/assets/skills/react.svg',
-      },
-      {
-        id: 6,
-        name: 'Tailwind CSS',
-        image: '/assets/skills/tailwindcss.png',
-      },
-      {
-        id: 8,
-        name: 'Material UI',
-        image: '/assets/skills/material-ui-svgrepo-com.svg',
-      },
-      {
-        id: 9,
-        name: 'Redux Toolkit',
-        image: '/assets/skills/redux.svg',
-      },
-      {
-        id: 19,
-        name: 'React Native',
-        image: '/assets/skills/react.svg',
-      },
+  // {
+  //   year: '2022',
+  //   icon: 'https://xebia.com/wp-content/uploads/2021/11/XebiaLogo-white.svg',
+  //   company: 'Xebia',
+  //   location: 'Chennai',
+  //   duration: '2022 (May) - 2025 (March)',
+  //   title: 'Software Consultant',
+  //   description: 'Leading development of enterprise-level web applications and implementing cutting-edge solutions.',
+  //   responsibilities: [
+  //     'Architecting and developing scalable web applications using Next.js, React, and Node.js',
+  //     'Implementing advanced state management and optimizing application performance',
+  //     'Designing microservices architecture for high-traffic applications',
+  //     'Leading development team and maintaining code quality standards',
+  //     'Handling complex integrations and security implementations',
+  //   ],
+  //   technologies: [
+  //     {
+  //       id: 1,
+  //       name: 'JavaScript',
+  //       image: '/assets/skills/javascript.svg',
+  //     },
+  //     {
+  //       id: 2,
+  //       name: 'TypeScript',
+  //       image: '/assets/skills/typescript.svg',
+  //     },
+  //     {
+  //       id: 3,
+  //       name: 'React',
+  //       image: '/assets/skills/react.svg',
+  //     },
+  //     {
+  //       id: 6,
+  //       name: 'Tailwind CSS',
+  //       image: '/assets/skills/tailwindcss.png',
+  //     },
+  //     {
+  //       id: 8,
+  //       name: 'Material UI',
+  //       image: '/assets/skills/material-ui-svgrepo-com.svg',
+  //     },
+  //     {
+  //       id: 9,
+  //       name: 'Redux Toolkit',
+  //       image: '/assets/skills/redux.svg',
+  //     },
+  //     {
+  //       id: 19,
+  //       name: 'React Native',
+  //       image: '/assets/skills/react.svg',
+  //     },
 
-      {
-        id: 10,
-        name: 'Node.js',
-        image: '/assets/skills/nodejs-1.svg',
-      },
-      {
-        id: 11,
-        name: 'Express',
-        image: '/assets/skills/express.svg',
-      },
-      {
-        id: 12,
-        name: 'MongoDB',
-        image: '/assets/skills/mongodb.svg',
-      },
-      {
-        id: 13,
-        name: 'PostgreSQL',
-        image: '/assets/skills/postresql.svg',
-      },
+  //     {
+  //       id: 10,
+  //       name: 'Node.js',
+  //       image: '/assets/skills/nodejs-1.svg',
+  //     },
+  //     {
+  //       id: 11,
+  //       name: 'Express',
+  //       image: '/assets/skills/express.svg',
+  //     },
+  //     {
+  //       id: 12,
+  //       name: 'MongoDB',
+  //       image: '/assets/skills/mongodb.svg',
+  //     },
+  //     {
+  //       id: 13,
+  //       name: 'PostgreSQL',
+  //       image: '/assets/skills/postresql.svg',
+  //     },
 
-      {
-        id: 14,
-        name: 'Docker',
-        image: '/assets/skills/docker.svg',
-      },
-      {
-        id: 15,
-        name: 'AWS',
-        image: '/assets/skills/aws.svg',
-      },
-      {
-        id: 16,
-        name: 'Linux',
-        image: '/assets/skills/linux.svg',
-      },
+  //     {
+  //       id: 14,
+  //       name: 'Docker',
+  //       image: '/assets/skills/docker.svg',
+  //     },
+  //     {
+  //       id: 15,
+  //       name: 'AWS',
+  //       image: '/assets/skills/aws.svg',
+  //     },
+  //     {
+  //       id: 16,
+  //       name: 'Linux',
+  //       image: '/assets/skills/linux.svg',
+  //     },
 
-      {
-        id: 21,
-        name: 'Git',
-        image: '/assets/skills/git.svg',
-      },
-      {
-        id: 22,
-        name: 'GitHub',
-        image: '/assets/skills/github.svg',
-      },
-      {
-        id: 23,
-        name: 'Stripe',
-        image: '/assets/skills/stripe.svg',
-      },
-      {
-        id: 24,
-        name: 'JSON',
-        image: '/assets/skills/json.svg',
-      },
-    ],
-    reverse: false,
-  },
+  //     {
+  //       id: 21,
+  //       name: 'Git',
+  //       image: '/assets/skills/git.svg',
+  //     },
+  //     {
+  //       id: 22,
+  //       name: 'GitHub',
+  //       image: '/assets/skills/github.svg',
+  //     },
+  //     {
+  //       id: 23,
+  //       name: 'Stripe',
+  //       image: '/assets/skills/stripe.svg',
+  //     },
+  //     {
+  //       id: 24,
+  //       name: 'JSON',
+  //       image: '/assets/skills/json.svg',
+  //     },
+  //   ],
+  //   reverse: false,
+  // },
   {
     year: '2021',
     icon: 'https://xebia.com/wp-content/uploads/2021/11/XebiaLogo-white.svg',
-    company: 'Netlink Digital Solutions',
+    company: 'Netlink Digital Solutions, Part of Xebia',
     icon: 'https://netlink.com/wp-content/uploads/2023/11/Netlink-White.png',
-
-    location: 'Chennai',
-    duration: '2021 - 2022',
+    location: 'Remote',
+    duration: '2021 - 2025',
     title: 'Software Engineer',
     description: 'Leading development of enterprise-level web applications and implementing cutting-edge solutions.',
     responsibilities: [
