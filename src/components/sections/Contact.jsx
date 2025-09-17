@@ -1,28 +1,32 @@
 import React, { useRef } from "react";
+import { toast } from "sonner";
 import emailjs from "@emailjs/browser";
 import { IconBrandLinkedin, IconBrandX } from "@tabler/icons-react";
 
 const Contact = () => {
   const form = useRef();
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    emailjs
-      .sendForm(
-        "service_edv71wh",
-        "template_snkz7dd",
-        form.current,
-        "y0s_PRp5UXaL55H1c"
-      )
+    const toastId = toast.loading("Sending message...");
+    emailjs.sendForm(
+      import.meta.env.VITE_EMAILJS_SERVICEID,
+      import.meta.env.VITE_EMAILJS_TEMPLATEID,
+      form.current,
+      import.meta.env.VITE_EMAILJS_PUBLICKEY
+    )
       .then(
-        (result) => {
-          console.log("✅ Message Sent:", result.text);
-          alert("Message sent successfully!");
-          form.current.reset(); 
+        () => {
+          toast.success("Message sent successfully ✅", {
+            id: toastId,
+            duration: 3000
+          });
+          form.current.reset();
         },
-        (error) => {
-          console.error("❌ Error:", error.text);
-          alert("Something went wrong. Please try again!");
+        () => {
+          toast.error("Something went wrong ❌ Please try again!", {
+            id: toastId,
+            duration: 3000
+          });
         }
       );
   };
