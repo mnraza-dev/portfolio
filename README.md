@@ -13,13 +13,12 @@ Visit the live website: [https://mnraza.vercel.app/](https://mnraza.vercel.app/)
 - Smooth animations and transitions
 - Modern UI/UX design
 - Project showcase section
-- Contact form
 - Experience timeline
+- Contact form
 
 ## 🛠️ Technologies Used
 
 - React.js
-- Three.js (3D graphics)
 - Tailwind CSS
 - Vite (Build tool)
 - Framer Motion (Animations)

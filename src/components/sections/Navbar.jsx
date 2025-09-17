@@ -11,8 +11,7 @@ const Navbar = () => {
         <div className="max-w-7xl flex justify-between items-center  mx-auto py-5 c-space">
           <a href="/" className="text-neutral-400 flex gap-0 items-center font-bold text-xl hover:text-white transition-colors">
             <img src="/logo.svg" alt="logo" className="w-16 h-auto" />
-            {/* <span className="text-white text-[1.5rem] font-extralight">Raza</span> */}
-          </a>
+         </a>
           <button
             className="text-neutral-400 hover:text-white focus:outline-none sm:hidden flex"
             aria-label="Toggle Menu"
