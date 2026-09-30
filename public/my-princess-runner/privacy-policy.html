@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Princess Runner – Privacy Policy</title>
+  <meta name="description" content="Privacy Policy for My Princess Runner - A casual mobile game explaining how information is collected, used, stored, and protected.">
+  <meta name="theme-color" content="#0a0b0e">
+  <meta name="robots" content="index, follow">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="canonical" href="[PRIVACY POLICY URL]">
+  <style>
+    :root {
+      --bg-primary: #0a0b0e;
+      --bg-secondary: #11131a;
+      --bg-card: #151824;
+      --bg-card-subtle: #1a1e2d;
+      --border-color: rgba(255, 255, 255, 0.08);
+      --border-accent: rgba(168, 85, 247, 0.35);
+      --text-primary: #f8fafc;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --accent-gradient: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 35%, #ec4899 70%, #f97316 100%);
+      --accent-link: #a78bfa;
+      --accent-link-hover: #f472b6;
+      --tag-bg: rgba(245, 158, 11, 0.12);
+      --tag-border: rgba(245, 158, 11, 0.35);
+      --tag-text: #fbbf24;
+      --code-bg: #1e2233;
+      --table-header-bg: #1c2030;
+      --table-alt-row: #131622;
+      --max-width: 960px;
+      --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--bg-primary);
+      color: var(--text-secondary);
+      font-family: var(--font-stack);
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    body {
+      background-color: var(--bg-primary);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Ambient background gradient glow */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100vw;
+      max-width: 1200px;
+      height: 480px;
+      background: radial-gradient(circle at 50% 0%, rgba(139, 92, 246, 0.15) 0%, rgba(236, 72, 153, 0.08) 35%, rgba(10, 11, 14, 0) 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Header & Navigation */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(10, 11, 14, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .header-container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0.9rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--text-primary);
+    }
+
+    .brand-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 9px;
+      background: var(--accent-gradient);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 14px rgba(168, 85, 247, 0.35);
+      flex-shrink: 0;
+    }
+
+    .brand-icon svg {
+      width: 18px;
+      height: 18px;
+      fill: #ffffff;
+    }
+
+    .brand-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: var(--text-primary);
+    }
+
+    .brand-subtitle {
+      display: block;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-weight: 400;
+      letter-spacing: 0.02em;
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .nav-pill {
+      font-size: 0.85rem;
+      font-weight: 500;
+      padding: 0.45rem 0.9rem;
+      border-radius: 9999px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      color: var(--text-muted);
+      border: 1px solid transparent;
+    }
+
+    .nav-pill:hover {
+      color: var(--text-primary);
+      border-color: var(--border-color);
+      background: var(--bg-card);
+    }
+
+    .nav-pill.active {
+      color: #ffffff;
+      background: var(--bg-card-subtle);
+      border-color: var(--border-accent);
+      box-shadow: 0 2px 10px rgba(139, 92, 246, 0.2);
+    }
+
+    /* Hero / Document Title */
+    .hero-section {
+      position: relative;
+      z-index: 1;
+      max-width: var(--max-width);
+      margin: 2.5rem auto 1.5rem;
+      padding: 0 1.5rem;
+    }
+
+    .doc-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.3rem 0.75rem;
+      border-radius: 9999px;
+      background: rgba(139, 92, 246, 0.15);
+      border: 1px solid var(--border-accent);
+      color: #c084fc;
+      margin-bottom: 1rem;
+    }
+
+    h1.doc-title {
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      line-height: 1.18;
+      color: var(--text-primary);
+      margin-bottom: 1rem;
+    }
+
+    .doc-title-gradient {
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .doc-meta-card {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      padding: 1.1rem 1.3rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      margin-top: 1.25rem;
+      font-size: 0.88rem;
+    }
+
+    .meta-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .meta-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+    }
+
+    .meta-value {
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+
+    /* Main Container */
+    .main-container {
+      position: relative;
+      z-index: 1;
+      max-width: var(--max-width);
+      margin: 0 auto 4rem;
+      padding: 0 1.5rem;
+      width: 100%;
+    }
+
+    /* Notice Card */
+    .advisory-card {
+      background: rgba(245, 158, 11, 0.07);
+      border-left: 4px solid #f59e0b;
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      margin: 1.75rem 0;
+      font-size: 0.92rem;
+      color: #fef3c7;
+    }
+
+    .advisory-card strong {
+      color: #fbbf24;
+    }
+
+    /* Table of Contents */
+    .toc-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      padding: 1.5rem;
+      margin: 2rem 0 3rem;
+    }
+
+    .toc-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .toc-title svg {
+      width: 18px;
+      height: 18px;
+      stroke: #a78bfa;
+    }
+
+    .toc-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 0.5rem 1.5rem;
+    }
+
+    .toc-list li a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.88rem;
+      display: inline-block;
+      padding: 0.25rem 0;
+      transition: color 0.15s ease, transform 0.15s ease;
+    }
+
+    .toc-list li a:hover {
+      color: #f472b6;
+      transform: translateX(4px);
+    }
+
+    .toc-num {
+      color: #818cf8;
+      font-weight: 600;
+      margin-right: 0.35rem;
+    }
+
+    /* Content Sections */
+    section.policy-section {
+      padding: 2.25rem 0;
+      border-bottom: 1px solid var(--border-color);
+      scroll-margin-top: 5rem;
+    }
+
+    section.policy-section:last-of-type {
+      border-bottom: none;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .section-number {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #c084fc;
+      background: rgba(168, 85, 247, 0.12);
+      padding: 0.15rem 0.6rem;
+      border-radius: 6px;
+      border: 1px solid rgba(168, 85, 247, 0.25);
+      flex-shrink: 0;
+    }
+
+    h2.section-heading {
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: -0.015em;
+      line-height: 1.3;
+    }
+
+    h3.sub-heading {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #e2e8f0;
+      margin: 1.5rem 0 0.65rem;
+      letter-spacing: -0.01em;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      color: var(--text-secondary);
+      font-size: 0.96rem;
+      line-height: 1.75;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    ul, ol {
+      margin: 0.75rem 0 1.25rem 1.5rem;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+      line-height: 1.65;
+    }
+
+    strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    a {
+      color: var(--accent-link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 0.15s ease;
+    }
+
+    a:hover {
+      color: var(--accent-link-hover);
+    }
+
+    /* Placeholder Badge for Developer Review */
+    .confirm-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      background: var(--tag-bg);
+      border: 1px solid var(--tag-border);
+      color: var(--tag-text);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.15rem 0.5rem;
+      border-radius: 5px;
+      vertical-align: baseline;
+      word-break: break-word;
+    }
+
+    .placeholder-val {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      background: rgba(147, 51, 234, 0.15);
+      border: 1px dashed rgba(168, 85, 247, 0.4);
+      color: #d8b4fe;
+      padding: 0.1rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.88em;
+      font-weight: 600;
+    }
+
+    /* Sub-card styles */
+    .content-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 1.25rem 1.5rem;
+      margin: 1.25rem 0;
+    }
+
+    .content-box-highlight {
+      background: var(--bg-card-subtle);
+      border-left: 3px solid #8b5cf6;
+    }
+
+    /* Responsive Data Table */
+    .table-container {
+      width: 100%;
+      overflow-x: auto;
+      margin: 1.5rem 0;
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+      background: var(--bg-card);
+    }
+
+    table.policy-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.9rem;
+      min-width: 620px;
+    }
+
+    table.policy-table th {
+      background: var(--table-header-bg);
+      color: var(--text-primary);
+      padding: 0.9rem 1.1rem;
+      font-weight: 600;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    table.policy-table td {
+      padding: 0.9rem 1.1rem;
+      border-bottom: 1px solid var(--border-color);
+      color: var(--text-secondary);
+      vertical-align: top;
+      line-height: 1.6;
+    }
+
+    table.policy-table tr:nth-child(even) td {
+      background: var(--table-alt-row);
+    }
+
+    table.policy-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* Back-to-top floating button & footer */
+    .back-to-top-wrapper {
+      display: flex;
+      justify-content: flex-end;
+      margin: 2rem 0 1rem;
+    }
+
+    .back-to-top {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-secondary);
+      text-decoration: none;
+      padding: 0.55rem 1rem;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    .back-to-top:hover {
+      background: var(--bg-card-subtle);
+      color: var(--text-primary);
+      border-color: var(--border-accent);
+      transform: translateY(-2px);
+    }
+
+    /* Site Footer */
+    .site-footer {
+      border-top: 1px solid var(--border-color);
+      background: var(--bg-secondary);
+      padding: 3rem 1.5rem 2.5rem;
+      margin-top: auto;
+    }
+
+    .footer-container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.75rem;
+    }
+
+    .footer-top {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.25rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.25rem;
+      list-style: none;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.88rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--text-primary);
+    }
+
+    .footer-legal-notice {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* Print styles */
+    @media print {
+      body {
+        background: #ffffff !important;
+        color: #111827 !important;
+      }
+      body::before { display: none; }
+      .site-header, .back-to-top-wrapper, .toc-card { display: none; }
+      .doc-card, .content-box, .table-container, table.policy-table {
+        background: #ffffff !important;
+        border-color: #e5e7eb !important;
+      }
+      h1, h2, h3, strong { color: #111827 !important; }
+      p, li, td { color: #374151 !important; }
+      .doc-title-gradient {
+        background: none !important;
+        -webkit-text-fill-color: #111827 !important;
+        color: #111827 !important;
+      }
+      a { color: #1f2937 !important; text-decoration: underline; }
+    }
+
+    /* Responsiveness */
+    @media (max-width: 768px) {
+      .header-container {
+        padding: 0.75rem 1rem;
+      }
+      .brand-title {
+        font-size: 1rem;
+      }
+      .hero-section {
+        margin: 1.75rem auto 1rem;
+        padding: 0 1rem;
+      }
+      .main-container {
+        padding: 0 1rem;
+      }
+      .doc-meta-card {
+        flex-direction: column;
+        gap: 0.85rem;
+      }
+      .toc-list {
+        grid-template-columns: 1fr;
+      }
+      section.policy-section {
+        padding: 1.75rem 0;
+      }
+      h2.section-heading {
+        font-size: 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body id="top">
+
+  <!-- Header Navigation -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="#top" class="brand-group" aria-label="My Princess Runner Home">
+        <div class="brand-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+          </svg>
+        </div>
+        <div>
+          <span class="brand-title">My Princess Runner</span>
+          <span class="brand-subtitle">Mobile Game</span>
+        </div>
+      </a>
+
+      <nav class="header-nav" aria-label="Primary Navigation">
+        <a href="privacy-policy.html" class="nav-pill active" aria-current="page">Privacy Policy</a>
+        <a href="terms-and-conditions.html" class="nav-pill">Terms &amp; Conditions</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <span class="doc-badge">Legal Document</span>
+    <h1 class="doc-title">
+      <span class="doc-title-gradient">Privacy Policy</span>
+    </h1>
+    <p>
+      This Privacy Policy describes how <strong>My Princess Runner</strong> collects, uses, stores,
+      protects, and discloses personal information when you use our mobile game.
+    </p>
+
+    <div class="doc-meta-card">
+      <div class="meta-item">
+        <span class="meta-label">Application</span>
+        <span class="meta-value">My Princess Runner</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Effective Date</span>
+        <span class="meta-value">[EFFECTIVE DATE]</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Last Updated</span>
+        <span class="meta-value">[LAST UPDATED]</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="main-container">
+
+    <!-- Developer Confirmation Advisory -->
+    <aside class="advisory-card" aria-label="Developer implementation notice">
+      <strong>Notice for App Developers &amp; Administrators:</strong>
+      Items highlighted with <span class="placeholder-val">[PLACEHOLDER]</span> must be populated with your verified business information.
+    </aside>
+
+    <!-- Table of Contents -->
+    <nav class="toc-card" aria-label="Table of contents">
+      <div class="toc-title">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="8" y1="6" x2="21" y2="6"></line>
+          <line x1="8" y1="12" x2="21" y2="12"></line>
+          <line x1="8" y1="18" x2="21" y2="18"></line>
+          <line x1="3" y1="6" x2="3.01" y2="6"></line>
+          <line x1="3" y1="12" x2="3.01" y2="12"></line>
+          <line x1="3" y1="18" x2="3.01" y2="18"></line>
+        </svg>
+        Table of Contents
+      </div>
+      <ol class="toc-list">
+        <li><a href="#section-1"><span class="toc-num">1.</span> Introduction</a></li>
+        <li><a href="#section-2"><span class="toc-num">2.</span> Information We Collect</a></li>
+        <li><a href="#section-3"><span class="toc-num">3.</span> How We Use Information</a></li>
+        <li><a href="#section-4"><span class="toc-num">4.</span> Analytics</a></li>
+        <li><a href="#section-5"><span class="toc-num">5.</span> Data Storage and Security</a></li>
+        <li><a href="#section-6"><span class="toc-num">6.</span> Data Retention</a></li>
+        <li><a href="#section-7"><span class="toc-num">7.</span> Data Deletion</a></li>
+        <li><a href="#section-8"><span class="toc-num">8.</span> Children’s Privacy</a></li>
+        <li><a href="#section-9"><span class="toc-num">9.</span> Changes to This Privacy Policy</a></li>
+        <li><a href="#section-10"><span class="toc-num">10.</span> Contact Information</a></li>
+      </ol>
+    </nav>
+
+    <!-- SECTION 1 -->
+    <section id="section-1" class="policy-section">
+      <div class="section-header">
+        <span class="section-number">1</span>
+        <h2 class="section-heading">Introduction</h2>
+      </div>
+      <p>
+        Welcome to <strong>My Princess Runner</strong> ("My Princess Runner", "the Application", "we", "us", or "our").
+        My Princess Runner is a casual mobile game application designed for Android devices.
+      </p>
+      <p>
+        This Privacy Policy explains what information we collect when you download or use My Princess Runner,
+        why we collect it, and how we handle it. We are committed to protecting your privacy and your personal data.
+      </p>
+      <p>
+        This policy applies solely to the My Princess Runner mobile application and does not extend to third-party
+        websites, applications, or services that may be linked within the game.
+      </p>
+    </section>
+
+    <!-- SECTION 2 -->
+    <section id="section-2" class="policy-section">
+      <div class="section-header">
+        <span class="section-number">2</span>
+        <h2 class="section-heading">Information We Collect</h2>
+      </div>
+      <p>
+        We collect information to provide, improve, and maintain our game. We only collect information that is necessary
+        for the game to function properly.
+      </p>
+
+      <h3 class="sub-heading">A. Information You Provide Directly</h3>
+      <ul>
+        <li>
+          <strong>Game Progress and Save Data:</strong> We store your game progress, high scores, achievements, and
+          preferences locally on your device to save your progress.
+        </li>
+        <li>
+          <strong>User Profile Information (Optional):</strong> If you choose to create a profile, we may collect your
+          username or nickname.
+        </li>
+        <li>
+          <strong>Support Communications:</strong> If you contact our support, we receive your email address and the
+          contents of your message.
+        </li>
+      </ul>
+
+      <h3 class="sub-heading">B. Information Collected Automatically</h3>
+      <ul>
+        <li>
+          <strong>Device Information:</strong> Device type, operating system version, app version, and screen specifications.
+          This helps us optimize the game for different devices.
+        </li>
+        <li>
+          <strong>Gameplay Analytics:</strong> Aggregated data about how you play the game (levels completed, features used).
+          This helps us improve the game experience.
+        </li>
+        <li>
+          <strong>Crash Data:</strong> Information about crashes or errors to help us fix bugs and improve stability.
+        </li>
+      </ul>
+    </section>
+
+    <!-- SECTION 3 -->
+    <section id="section-3" class="policy-section">
+      <div class="section-header">
+        <span class="section-number">3</span>
+        <h2 class="section-heading">How We Use Information</h2>
+      </div>
+      <p>We use the information we collect for the following purposes:</p>
+      <ul>
+        <li><strong>Provide the Game:</strong> To deliver and let you enjoy My Princess Runner, including storing your
+        game progress and save data.</li>
+        <li><strong>Improve the Game:</strong> To analyze gameplay patterns and fix bugs to enhance your experience.</li>
+        <li><strong>Communicate:</strong> To respond to your questions, feedback, or support requests.</li>
+        <li><strong>Product Updates:</strong> To notify you about new versions or important updates to the game.</li>
+      </ul>
+    </section>
+
+    <!-- SECTION 4 -->
+    <section id="section-4" class="policy-section">
+      <div class="section-header">
+        <span class="section-number">4</span>
+        <h2 class="section-heading">Analytics</h2>
+      </div>
+      <p>
+        We may use analytics services such as [ANALYTICS PROVIDER] to understand how users interact with My Princess Runner.
+        This helps us improve the game and fix issues.
+      </p>
+      <p>
+        Analytics data may include: gameplay events, session duration, crash reports, and device information.
+        This data is processed in an aggregated and pseudonymized form and is not linked to your personal identity.
+      </p>
+    </section>
+
+    <!-- SECTION 5 -->
+    <section id="section-5" class="policy-section">
+      <div class="section-header">
+        <span class="section-number">5</span>
+        <h2 class="section-heading">Data Storage and Security</h2>
+      </div>
+      <p>
+        We take the security of your information seriously. We employ commercially reasonable measures to protect
+        your data from unauthorized access, alteration, disclosure, or destruction.
+      </p>
+      <ul>
+        <li>
+          <strong>Encryption in Transit:</strong> All data transmitted between your device and our servers uses
+          industry-standard encryption (HTTPS/TLS).
+        </li>
+        <li>
+          <strong>Local Storage:</strong> Game save data and preferences are stored securely on your device using
+          Android's protected storage mechanisms.
+        </li>
+        <li>
+          <strong>Server Security:</strong> Any data stored on our servers is protected by security measures including
+          access controls and encryption.
+        </li>
+      </ul>
+    </section>
+
+    <!-- SECTION 6 -->
+    <section id="section-6" class="policy-section">
+      <div class="section-header">
+        <span class="section-number">6</span>
+        <h2 class="section-heading">Data Retention</h2>
+      </div>
+      <p>We retain your information for as long as necessary to fulfill the purposes described in this Privacy Policy:</p>
+      <ul>
+        <li>
+          <strong>Game Save Data:</strong> Stored on your device until you uninstall the app or clear the app data.
+        </li>
+        <li>
+          <strong>Analytics and Crash Data:</strong> Retained for [RETENTION PERIOD, E.G., 12 MONTHS] to improve the game.
+        </li>
+        <li>
+          <strong>Support Communications:</strong> Retained for [SUPPORT RETENTION, E.G., 12 MONTHS] to resolve issues.
+        </li>
+      </ul>
+    </section>
+
+    <!-- SECTION 7 -->
+    <section id="section-7" class="policy-section">
+      <div class="section-header">
+        <span class="section-number">7</span>
+        <h2 class="section-heading">Data Deletion</h2>
+      </div>
+      <p>You can delete your data at any time:</p>
+      <ol>
+        <li>
+          <strong>Delete Game Data on Your Device:</strong> Go to your device's Settings &rarr; Apps &rarr; My Princess Runner
+          &rarr; Storage &rarr; Clear Storage (or uninstall and reinstall the game).
+        </li>
+        <li>
+          <strong>Request Data Deletion:</strong> Contact us at <a href="mailto:[PRIVACY EMAIL]">[PRIVACY EMAIL]</a>.
+          We will delete your personal information from our servers in accordance with applicable law.
+        </li>
+      </ol>
+    </section>
+
+    <!-- SECTION 8 -->
+    <section id="section-8" class="policy-section">
+      <div class="section-header">
+        <span class="section-number">8</span>
+        <h2 class="section-heading">Children’s Privacy</h2>
+      </div>
+      <p>
+        My Princess Runner is not intended for, and we do not knowingly collect, personal information from children
+        under the age of 13. If you are a parent or guardian and believe your child has provided personal information
+        to us, please contact us at <a href="mailto:[PRIVACY EMAIL]">[PRIVACY EMAIL]</a>. We will promptly delete
+        any information we receive from a child.
+      </p>
+    </section>
+
+    <!-- SECTION 9 -->
+    <section id="section-9" class="policy-section">
+      <div class="section-header">
+        <span class="section-number">9</span>
+        <h2 class="section-heading">Changes to This Privacy Policy</h2>
+      </div>
+      <p>
+        We may update this Privacy Policy from time to time. When we make changes, we will revise the "Last Updated"
+        date at the top of this page. We encourage you to review this Privacy Policy periodically.
+      </p>
+    </section>
+
+    <!-- SECTION 10 -->
+    <section id="section-10" class="policy-section">
+      <div class="section-header">
+        <span class="section-number">10</span>
+        <h2 class="section-heading">Contact Information</h2>
+      </div>
+      <p>
+        If you have any questions about this Privacy Policy or our data practices, please contact us:
+      </p>
+
+      <div class="content-box">
+        <p><strong>Email:</strong> <a href="mailto:[PRIVACY EMAIL]">[PRIVACY EMAIL]</a></p>
+        <p><strong>Website:</strong> <a href="[WEBSITE URL]" target="_blank" rel="noopener noreferrer">[WEBSITE URL]</a></p>
+      </div>
+    </section>
+
+    <!-- Back to Top -->
+    <div class="back-to-top-wrapper">
+      <a href="#top" class="back-to-top" aria-label="Return to top of document">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+        Back to Top
+      </a>
+    </div>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="brand-group">
+          <div class="brand-icon" style="width:28px; height:28px;" aria-hidden="true">
+            <svg viewBox="0 0 24 24" style="width:14px; height:14px;">
+              <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+            </svg>
+          </div>
+          <span style="font-weight: 600; color: var(--text-primary); font-size: 0.95rem;">My Princess Runner</span>
+        </div>
+
+        <ul class="footer-links">
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms-and-conditions.html">Terms &amp; Conditions</a></li>
+          <li><a href="mailto:[SUPPORT EMAIL]">Support</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-legal-notice">
+        <p>&copy; <span class="placeholder-val">[YEAR]</span> <span class="placeholder-val">[COMPANY NAME]</span>. All rights reserved.</p>
+        <p style="margin-top: 0.4rem; font-size: 0.76rem; color: #64748b;">
+          Disclaimer: This privacy document is provided for informational and transparency purposes. Ensure all placeholders
+          are verified and updated by your legal counsel prior to formal publication.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
