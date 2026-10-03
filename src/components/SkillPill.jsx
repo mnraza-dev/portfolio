@@ -18,11 +18,12 @@ const SkillPill = memo(
         onDragOver={onDragOver}
         onDrop={(e) => onDrop(e, index)}
         onDragEnd={onDragEnd}
-        className={`bg-gray-900/50 backdrop-blur-sm border border-gray-800 ${colors.border} rounded-full px-4 py-2 transition-all duration-300 hover:shadow-lg ${colors.shadow} group flex items-center gap-2 cursor-grab active:cursor-grabbing select-none ${
+        className={`bg-gray-900/50 border border-gray-800 rounded-full px-4 py-2 transition-all duration-300 cursor-pointer select-none ${
           isDragging ? 'opacity-50 scale-95' : ''
-        }`}>
+        } hover:bg-gray-800`}
+      >
         {showImage ? (
-          <div className={`${colors.icon} transition-colors`}>
+          <div className="flex items-center gap-2">
             <img
               src={skill.image}
               alt={skill.name}
@@ -33,17 +34,14 @@ const SkillPill = memo(
               onError={handleImageError}
               loading="lazy"
             />
+            <span className="text-sm text-gray-300">{skill.name}</span>
           </div>
         ) : (
-          <div
-            className={`${colors.icon} transition-colors w-5 h-5 rounded-full bg-current opacity-20 flex items-center justify-center`}>
-            <span className="text-xs text-gray-500">{skill.name.charAt(0)}</span>
-          </div>
+          <span className="text-sm text-gray-300">{skill.name}</span>
         )}
-        <span className="text-sm font-medium text-white group-hover:text-gray-100 transition-colors">{skill.name}</span>
       </div>
     );
   },
 );
 
-export default SkillPill; 
+export default SkillPill;

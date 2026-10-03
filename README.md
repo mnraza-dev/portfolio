@@ -1,18 +1,15 @@
-# Portfolio 
+# Portfolio
 
-A modern, interactive portfolio website built with React, Three.js, and Tailwind CSS.
+A clean, minimal portfolio website built with React, Vite, and Tailwind CSS — redesigned to match the aesthetic of [ratneshc.com](https://ratneshc.com).
 
-## 🌐 Live Demo
+## 🌐 Features
 
-Visit the live website: [https://mnraza.vercel.app/](https://mnraza.vercel.app/)
-
-## 🚀 Features
-
-- Responsive design with Tailwind CSS
-- Smooth animations and transitions
-- Modern UI/UX design
+- Clean, minimal dark-mode design
+- Responsive layout with Tailwind CSS
+- Smooth scroll behavior and transitions
 - Project showcase section
-- Experience timeline
+- Work experience timeline
+- Tech stack display
 - Contact form
 
 ## 🛠️ Technologies Used
@@ -20,7 +17,7 @@ Visit the live website: [https://mnraza.vercel.app/](https://mnraza.vercel.app/)
 - React.js
 - Tailwind CSS
 - Vite (Build tool)
-- Framer Motion (Animations)
+- @tabler/icons-react
 
 ## 📦 Installation
 
@@ -37,14 +34,16 @@ Visit the live website: [https://mnraza.vercel.app/](https://mnraza.vercel.app/)
 ## 📁 Project Structure
 
 - `src/components/` - React components
-- `src/sections/`  - Page sections
+- `src/components/sections/` - Page sections
 - `public/assets/` - Static assets
 
 ## 🎨 Customization
+
 The portfolio can be easily customized by:
 - Updating personal information in components
 - Modifying styles using Tailwind CSS classes
 - Adding new sections as needed
+
 ## 📄 License
 
-This project is open source and available under the [MIT License](LICENSE).
+This project is open source and available under the MIT License.
