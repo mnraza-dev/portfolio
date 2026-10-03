@@ -1,12 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: ['selector', '[data-theme="dark"]'],
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       fontFamily: {
+        'geist-mono': ['Geist Mono', 'SFMono-Regular', 'Consolas', 'monospace'],
         generalsans: ['General Sans', 'sans-serif'],
       },
       colors: {
+        muted: { DEFAULT: 'rgb(var(--pill-muted) / <alpha-value>)', foreground: 'rgb(var(--pill-text) / <alpha-value>)' },
+        foreground: 'rgb(var(--pill-foreground) / <alpha-value>)',
+        border: 'rgb(var(--pill-border) / <alpha-value>)',
+        ring: 'rgb(var(--pill-ring) / <alpha-value>)',
         black: {
           DEFAULT: '#000',
           100: '#010103',
