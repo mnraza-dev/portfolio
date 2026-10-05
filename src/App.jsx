@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
-import { ArrowUpRight, ArrowRight, Github, Mail, Sun, Moon, Search, X, MapPin, ChevronDown, Linkedin, Quote, Sparkles, Image, Gamepad2 } from 'lucide-react';
+import { ArrowUpRight, ArrowRight, Github, Mail, Sun, Moon, Search, X, MapPin, ChevronDown, Linkedin, Quote, Sparkles, Image, FileText } from 'lucide-react';
 import { myProjects, workExperiences } from './constants';
 import { testimonials } from './constants/testimonials';
 import XFeed from './components/XFeed';
+import AppsCarousel from './components/AppsCarousel';
 
 const email = 'noorullahraza007@gmail.com';
 const navigation = [['Home', 'home'], ['Projects', 'projects'], ['Apps', 'apps'], ['Experience', 'experience'], ['Stack', 'skills'], ['Testimonials', 'testimonials'], ['Posts', 'posts'], ['Connect', 'contact']];
@@ -24,9 +25,10 @@ const socials = [
   ['LinkedIn', 'https://www.linkedin.com/in/mnraza1907/', Linkedin],
 ];
 const apps = [
-  { name: 'PixelRevive', category: 'AI photo enhancer', description: 'Enhance image clarity, sharpness, and quality with AI.', href: '/pixelrevive/index.html', Icon: Sparkles, color: 'violet' },
-  { name: 'ScreenMe AI', category: 'AI wallpapers', description: 'Turn your ideas into AI-generated wallpapers for your screen.', href: '/screenme-ai/privacy-policy.html', Icon: Image, color: 'blue' },
-  { name: 'My Princess Runner', category: 'Mobile game', description: 'A runner game for your mobile device.', href: '/my-princess-runner/privacy-policy.html', Icon: Gamepad2, color: 'rose' },
+  { name: 'InstantDoc', folder: 'instant-docs', category: 'Android app', description: 'Explore InstantDoc on Google Play.', href: 'https://play.google.com/store/apps/details?id=com.instantdoc.app', linkLabel: 'View on Google Play', logo: '/assets/projects/apps/instant-docs/logo-icon.png', Icon: FileText, color: 'blue' },
+  { name: 'Namma Notes', folder: 'namma-notes', category: 'Notes app', description: 'Keep your notes together with Namma Notes.', href: 'https://play.google.com/store/apps/details?id=com.razatechlabs.nammanotes', linkLabel: 'View on Google Play', logo: '/assets/projects/apps/namma-notes/logo.png', Icon: FileText, color: 'violet' },
+  { name: 'PixelRevive', folder: 'pixelrevive', category: 'AI photo enhancer', description: 'Enhance image clarity, sharpness, and quality with AI.', href: 'https://play.google.com/store/apps/details?id=com.razatechlabs.pixelrevive.ai.photo.enhancer', linkLabel: 'View on Google Play', logo: '/assets/projects/apps/pixelrevive/logo.png', Icon: Sparkles, color: 'violet' },
+  { name: 'ScreenMe AI', folder: 'screen-me', category: 'AI wallpapers', description: 'Turn your ideas into AI-generated wallpapers for your screen.', href: 'https://play.google.com/store/apps/details?id=com.razatechlabs.screenme.ai.app', linkLabel: 'View on Google Play', logo: '/assets/projects/apps/screen-me/logo.png', Icon: Image, color: 'blue' },
 ];
 const skillLinks = {
   TypeScript: 'https://www.typescriptlang.org/', JavaScript: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
@@ -137,17 +139,7 @@ export default function App() {
 
         <section id="apps" className="content-section">
           <div className="section-heading"><h2>Apps</h2><a href="https://play.google.com/store/apps/developer?id=RazaTech+Labs" target="_blank" rel="noopener noreferrer">RazaTech Labs on Play Store <ArrowUpRight size={14}/></a></div>
-          <div className="apps-grid">
-            {apps.map(({ name, category, description, href, Icon, color }) => (
-              <article className="app-card" key={name}>
-                <div className={`app-icon app-icon-${color}`}><Icon size={24} aria-hidden="true"/></div>
-                <span className="app-category">{category}</span>
-                <h3>{name}</h3>
-                <p>{description}</p>
-                <a href={href}>Privacy policy <ArrowUpRight size={13}/></a>
-              </article>
-            ))}
-          </div>
+          <AppsCarousel apps={apps}/>
         </section>
 
         <section id="experience" className="content-section">
