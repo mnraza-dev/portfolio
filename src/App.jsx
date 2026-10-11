@@ -25,6 +25,7 @@ const socials = [
   ['LinkedIn', 'https://www.linkedin.com/in/mnraza1907/', Linkedin],
 ];
 const apps = [
+  { name: 'Settler', folder: 'settler', category: 'Personal finance', description: 'Track expenses, plan budgets, and manage all your accounts in one place.', href: 'https://play.google.com/store/apps/details?id=com.razatechlabs.settler', linkLabel: 'View on Google Play', logo: '/assets/projects/apps/settler/logo.png', Icon: FileText, color: 'blue' },
   { name: 'InstantDoc', folder: 'instant-docs', category: 'Android app', description: 'Explore InstantDoc on Google Play.', href: 'https://play.google.com/store/apps/details?id=com.instantdoc.app', linkLabel: 'View on Google Play', logo: '/assets/projects/apps/instant-docs/logo-icon.png', Icon: FileText, color: 'blue' },
   { name: 'Namma Notes', folder: 'namma-notes', category: 'Notes app', description: 'Keep your notes together with Namma Notes.', href: 'https://play.google.com/store/apps/details?id=com.razatechlabs.nammanotes', linkLabel: 'View on Google Play', logo: '/assets/projects/apps/namma-notes/logo.png', Icon: FileText, color: 'violet' },
   { name: 'PixelRevive', folder: 'pixelrevive', category: 'AI photo enhancer', description: 'Enhance image clarity, sharpness, and quality with AI.', href: 'https://play.google.com/store/apps/details?id=com.razatechlabs.pixelrevive.ai.photo.enhancer', linkLabel: 'View on Google Play', logo: '/assets/projects/apps/pixelrevive/logo.png', Icon: Sparkles, color: 'violet' },

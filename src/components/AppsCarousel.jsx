@@ -40,9 +40,9 @@ export default function AppsCarousel({ apps }) {
               <div className="app-details">
                 <div className={`app-icon app-icon-${color}`}>{logo ? <img src={logo} alt={`${name} logo`} loading="lazy"/> : <Icon size={24} aria-hidden="true"/>}</div>
                 <span className="app-category">{category}</span><h3>{name}</h3><p>{description}</p>
-                <a href={href} className={linkLabel === 'View on Google Play' ? 'google-play-link' : undefined} tabIndex={position === 0 ? 0 : -1} target={href.startsWith('https://') ? '_blank' : undefined} rel={href.startsWith('https://') ? 'noopener noreferrer' : undefined} aria-label={`${linkLabel} — ${name}`}>
+                {href && <a href={href} className={linkLabel === 'View on Google Play' ? 'google-play-link' : undefined} tabIndex={position === 0 ? 0 : -1} target={href.startsWith('https://') ? '_blank' : undefined} rel={href.startsWith('https://') ? 'noopener noreferrer' : undefined} aria-label={`${linkLabel} — ${name}`}>
                   {linkLabel === 'View on Google Play' ? <><img src="/assets/playstore.png" alt="" aria-hidden="true"/><span><small>GET IT ON</small><strong>Google Play</strong></span></> : <>{linkLabel}<ArrowUpRight size={13}/></>}
-                </a>
+                </a>}
               </div>
               <AppScreenshotSlider name={name} folder={folder} hovered={hovered === index && visible}/>
             </article>
