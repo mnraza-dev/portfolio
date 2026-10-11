@@ -117,30 +117,6 @@ export const myProjects = [
   },
 
   {
-    title: 'Tesla Clone – Responsive Product Landing Page',
-    desc: 'A visually rich Tesla landing page clone featuring multiple car models, sleek design, and smooth transitions. Built to closely replicate the look and feel of Tesla’s official website.',
-    subdesc:
-      'Developed using React.js and styled with responsive design principles to ensure optimal display across all devices. Includes reusable components, dynamic car model sections, and modern UI animations.',
-    href: 'http://tesla-clone-mnrazablog.vercel.app/',
-    repo: 'https://github.com/mnraza-dev/tesla-clone',
-    texture: '/textures/project/tesla-clone.mp4',
-    logo: '/assets/tesla.gif',
-    logoStyle: {
-      backgroundColor: '#111111',
-      border: '0.2px solid #1F1F1F',
-      boxShadow: '0px 0px 60px 0px #FFFFFF1A',
-    },
-    spotlight: '/assets/spotlight2.png',
-    tags: [
-      { id: 1, name: 'React.js', path: '/assets/skills/react.svg' },
-      { id: 2, name: 'Responsive Design', path: '/assets/skills/responsive.png' },
-      { id: 3, name: 'CSS3', path: '/assets/skills/css3.svg' },
-      { id: 4, name: 'JavaScript', path: '/assets/skills/javascript.svg' },
-    ],
-    year: '2025',
-  },
-
-  {
     title: 'URL shortener – A Smart URL Shortener',
     desc: 'URL shortener is a lightweight and fast URL shortener app designed to create, manage, and share shortened links with tracking support.',
     subdesc:
@@ -187,6 +163,30 @@ export const myProjects = [
       { id: 3, name: 'NodeJS', path: '/assets/skills/node.svg' },
       { id: 4, name: 'ExpressJS', path: '/assets/skills/express.svg' },
       { id: 5, name: 'REST API', path: '/assets/skills/restapi.svg' },
+    ],
+    year: '2025',
+  },
+
+  {
+    title: 'Tesla Clone – Responsive Product Landing Page',
+    desc: 'A visually rich Tesla landing page clone featuring multiple car models, sleek design, and smooth transitions. Built to closely replicate the look and feel of Tesla’s official website.',
+    subdesc:
+      'Developed using React.js and styled with responsive design principles to ensure optimal display across all devices. Includes reusable components, dynamic car model sections, and modern UI animations.',
+    href: 'http://tesla-clone-mnrazablog.vercel.app/',
+    repo: 'https://github.com/mnraza-dev/tesla-clone',
+    texture: '/textures/project/tesla-clone.mp4',
+    logo: '/assets/tesla.gif',
+    logoStyle: {
+      backgroundColor: '#111111',
+      border: '0.2px solid #1F1F1F',
+      boxShadow: '0px 0px 60px 0px #FFFFFF1A',
+    },
+    spotlight: '/assets/spotlight2.png',
+    tags: [
+      { id: 1, name: 'React.js', path: '/assets/skills/react.svg' },
+      { id: 2, name: 'Responsive Design', path: '/assets/skills/responsive.png' },
+      { id: 3, name: 'CSS3', path: '/assets/skills/css3.svg' },
+      { id: 4, name: 'JavaScript', path: '/assets/skills/javascript.svg' },
     ],
     year: '2025',
   },

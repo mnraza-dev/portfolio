@@ -196,6 +196,10 @@
 .app-carousel-card .app-screenshot-frame { height: 100%; min-height: 0; aspect-ratio: auto; border-radius: 8px; background: radial-gradient(ellipse at center, var(--hover), var(--bg)); }
 .app-carousel-card .app-screenshot-frame img { position: absolute; inset: 12px; width: calc(100% - 24px); height: calc(100% - 24px); object-fit: contain; object-position: center; border-radius: 8px; }
 .app-carousel-card.is-centered { transform: translateX(-50%) scale(1); opacity: 1; border-color: var(--accent); box-shadow: 0 8px 24px #00000015; z-index: 1; }
+@media (hover: hover) and (pointer: fine) {
+  .apps-carousel-viewport { overflow: clip; overflow-clip-margin: 110px; }
+  .app-carousel-card:hover { transform: translateX(calc(-50% + var(--position) * 100%)) scale(1.4); opacity: 1; z-index: 2; }
+}
 .app-neighbor-select { position: absolute; inset: 0; z-index: 2; border: 0; border-radius: inherit; background: transparent; }
 .apps-carousel-controls { display: flex; align-items: center; justify-content: center; gap: 18px; margin-top: 8px; }
 .apps-carousel-controls span { min-width: 160px; text-align: center; font-size: 11px; color: var(--muted); }
