@@ -1,8 +1,11 @@
 import { useRef, useState } from 'react';
 import { ArrowUpRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import AppScreenshotSlider from './AppScreenshotSlider';
+import AppGallery from './AppGallery';
+import LivingBackdrop from './LivingBackdrop';
 
 export default function AppsCarousel({ apps }) {
+  const [gallery, setGallery] = useState(null);
   const [active, setActive] = useState(0);
   const [hovered, setHovered] = useState(null);
   const touchStart = useRef(null);
@@ -12,6 +15,7 @@ export default function AppsCarousel({ apps }) {
   };
   return (
     <div className="apps-carousel" role="region" aria-roledescription="carousel" aria-label="Mobile apps">
+      <LivingBackdrop/>
       <div className="apps-carousel-viewport" tabIndex={0}
         onKeyDown={(event) => {
           if (event.target !== event.currentTarget) return;
@@ -44,11 +48,15 @@ export default function AppsCarousel({ apps }) {
                   {linkLabel === 'View on Google Play' ? <><img src="/assets/playstore.png" alt="" aria-hidden="true"/><span><small>GET IT ON</small><strong>Google Play</strong></span></> : <>{linkLabel}<ArrowUpRight size={13}/></>}
                 </a>}
               </div>
-              <AppScreenshotSlider name={name} folder={folder} hovered={hovered === index && visible}/>
+              <button className="app-gallery-trigger" tabIndex={position === 0 ? 0 : -1} onClick={() => setGallery(index)} aria-label={`Open ${name} gallery`}>
+                <AppScreenshotSlider name={name} folder={folder} hovered={hovered === index && visible}/>
+                <span className="gallery-open-label">Explore gallery <ArrowUpRight size={14}/></span>
+              </button>
             </article>
           );
         })}
       </div>
+      {gallery !== null && <AppGallery apps={apps} initialApp={gallery} onClose={() => setGallery(null)}/>}
       <div className="apps-carousel-controls">
         <button aria-label="Previous app" onClick={() => move(-1)}><ChevronLeft size={18}/></button>
         <span aria-live="polite" aria-atomic="true">{apps[active].name} · {active + 1} / {apps.length}</span>
