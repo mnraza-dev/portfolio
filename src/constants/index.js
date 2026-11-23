@@ -209,7 +209,7 @@ export const workExperiences = [
     icon: 'https://xebia.com/wp-content/uploads/2021/11/XebiaLogo-white.svg',
     company: 'Netlink Digital Solutions, Part of Xebia',
     location: 'Remote',
-    duration: '2021 - 2025',
+    duration: '2021 - Present',
     title: 'Software Engineer',
     description: 'Leading development of enterprise-level web applications and implementing cutting-edge solutions.',
     responsibilities: [
