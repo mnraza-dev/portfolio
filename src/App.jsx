@@ -120,7 +120,7 @@ export default function App() {
             <span className="availability profile-availability"><i/>Available for opportunities</span>
           </div>
           <div className="intro-copy">
-            <p>I’m a software engineer with 4+ years of experience turning ideas into clean, scalable web products.</p>
+            <p>I’m a software engineer with 5+ years of experience turning ideas into clean, scalable web products.</p>
             <p>I work with <strong>React, Next.js, and Node.js</strong> to build thoughtful interfaces and reliable applications. From AI experiences to enterprise platforms, I enjoy making complex things feel simple.</p>
             <p>Explore my work below, find my code on <a href="https://github.com/mnraza-dev" target="_blank" rel="noreferrer">GitHub <ArrowUpRight size={13}/></a>, or <a href={`mailto:${email}`}>say hello <ArrowUpRight size={13}/></a>.</p>
           </div>
